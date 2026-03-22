@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SiteMap SiteMapId="{FBE0F11A-3124-5678-9ABC-DEF012345678}"
+         Name="JBPHH Reception SOR Site Map"
+         UniqueName="jbphh_receptionsor_sitemap"
+         IntroducedVersion="1.0.0.0"
+         IsCustomizable="1"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LocalizedNames>
+    <LocalizedName description="JBPHH Reception SOR" languagecode="1033"/>
+  </LocalizedNames>
+
+  <Area Id="jbphh_sor_area" ShowGroups="true" ResourceId="Area_Title">
+    <Titles>
+      <Title LCID="1033" Title="SOR Management"/>
+    </Titles>
+    <Descriptions>
+      <Description LCID="1033" Description="Reception Support Statement of Requirements Management"/>
+    </Descriptions>
+    <Icon>WebResource/jbphh_soricon_16</Icon>
+    <Groups>
+
+      <!-- =========================================================
+           Group 1: SOR & PAR
+      ========================================================== -->
+      <Group Id="jbphh_sor_group" IsProfile="false">
+        <Titles>
+          <Title LCID="1033" Title="Requirements"/>
+        </Titles>
+        <SubAreas>
+          <!-- Statements of Requirements -->
+          <SubArea Id="jbphh_sor_subarea"
+                   Entity="jbphh_sor"
+                   Title="Statements of Requirements"
+                   Icon="/_imgs/ico_18_customentity.gif"
+                   GetStartedPanePath=""
+                   ShowInClient="true">
+            <Titles>
+              <Title LCID="1033" Title="Statements of Requirements"/>
+            </Titles>
+            <Descriptions>
+              <Description LCID="1033" Description="Create and manage Reception Support Statements of Requirements"/>
+            </Descriptions>
+          </SubArea>
+          <!-- Pre-Arrival Requests -->
+          <SubArea Id="jbphh_par_subarea"
+                   Entity="jbphh_par"
+                   Title="Pre-Arrival Requests"
+                   Icon="/_imgs/ico_18_customentity.gif"
+                   ShowInClient="true">
+            <Titles>
+              <Title LCID="1033" Title="Pre-Arrival Requests"/>
+            </Titles>
+            <Descriptions>
+              <Description LCID="1033" Description="Submit and track Pre-Arrival Requests linked to an SOR"/>
+            </Descriptions>
+          </SubArea>
+        </SubAreas>
+      </Group>
+
+      <!-- =========================================================
+           Group 2: Execution
+      ========================================================== -->
+      <Group Id="jbphh_execution_group" IsProfile="false">
+        <Titles>
+          <Title LCID="1033" Title="Execution"/>
+        </Titles>
+        <SubAreas>
+          <!-- Tasks -->
+          <SubArea Id="jbphh_task_subarea"
+                   Entity="jbphh_task"
+                   Title="Reception Tasks"
+                   Icon="/_imgs/ico_18_customentity.gif"
+                   ShowInClient="true">
+            <Titles>
+              <Title LCID="1033" Title="Reception Tasks"/>
+            </Titles>
+            <Descriptions>
+              <Description LCID="1033" Description="Manage and track individual action items for reception support"/>
+            </Descriptions>
+          </SubArea>
+          <!-- Support Requests -->
+          <SubArea Id="jbphh_support_subarea"
+                   Entity="jbphh_support"
+                   Title="Support Requests"
+                   Icon="/_imgs/ico_18_customentity.gif"
+                   ShowInClient="true">
+            <Titles>
+              <Title LCID="1033" Title="Support Requests"/>
+            </Titles>
+            <Descriptions>
+              <Description LCID="1033" Description="Track lodging, dining, transportation, and other support requests"/>
+            </Descriptions>
+          </SubArea>
+        </SubAreas>
+      </Group>
+
+      <!-- =========================================================
+           Group 3: Communications
+      ========================================================== -->
+      <Group Id="jbphh_comms_group" IsProfile="false">
+        <Titles>
+          <Title LCID="1033" Title="Communications"/>
+        </Titles>
+        <SubAreas>
+          <!-- Notifications -->
+          <SubArea Id="jbphh_notification_subarea"
+                   Entity="jbphh_notification"
+                   Title="Notifications"
+                   Icon="/_imgs/ico_18_customentity.gif"
+                   ShowInClient="true">
+            <Titles>
+              <Title LCID="1033" Title="Notifications"/>
+            </Titles>
+            <Descriptions>
+              <Description LCID="1033" Description="View system notifications and alerts related to SOR activities"/>
+            </Descriptions>
+          </SubArea>
+        </SubAreas>
+      </Group>
+
+      <!-- =========================================================
+           Group 4: Administration
+      ========================================================== -->
+      <Group Id="jbphh_admin_group" IsProfile="false">
+        <Titles>
+          <Title LCID="1033" Title="Administration"/>
+        </Titles>
+        <SubAreas>
+          <!-- Military Units -->
+          <SubArea Id="jbphh_unit_subarea"
+                   Entity="jbphh_unit"
+                   Title="Military Units"
+                   Icon="/_imgs/ico_18_customentity.gif"
+                   ShowInClient="true">
+            <Titles>
+              <Title LCID="1033" Title="Military Units"/>
+            </Titles>
+            <Descriptions>
+              <Description LCID="1033" Description="Manage requesting unit records and their primary points of contact"/>
+            </Descriptions>
+          </SubArea>
+        </SubAreas>
+      </Group>
+
+    </Groups>
+  </Area>
+</SiteMap>

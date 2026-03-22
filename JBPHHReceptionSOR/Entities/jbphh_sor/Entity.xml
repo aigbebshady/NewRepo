@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Statement of Requirements" OriginalName="jbphh_sor">jbphh_sor</Name>
+  <EntityInfo>
+    <entity Name="jbphh_sor">
+      <LocalizedNames>
+        <LocalizedName description="Statement of Requirements" languagecode="1033"/>
+      </LocalizedNames>
+      <LocalizedCollectionNames>
+        <LocalizedCollectionName description="Statements of Requirements" languagecode="1033"/>
+      </LocalizedCollectionNames>
+      <Descriptions>
+        <Description description="Reception Support Statement of Requirements submitted by requesting units" languagecode="1033"/>
+      </Descriptions>
+      <attributes>
+        <!-- Primary Key -->
+        <attribute PhysicalName="jbphh_sorid">
+          <Type>primarykey</Type>
+          <Name>jbphh_sorid</Name>
+          <LogicalName>jbphh_sorid</LogicalName>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind</DisplayMask>
+          <IsPrimaryId>1</IsPrimaryId>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Statement of Requirements" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Primary Name Field -->
+        <attribute PhysicalName="jbphh_name">
+          <Type>nvarchar</Type>
+          <Name>jbphh_name</Name>
+          <LogicalName>jbphh_name</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <IsPrimaryName>1</IsPrimaryName>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="SOR Title" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Descriptive title for this Statement of Requirements" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+        <!-- SOR Number -->
+        <attribute PhysicalName="jbphh_sornumber">
+          <Type>nvarchar</Type>
+          <Name>jbphh_sornumber</Name>
+          <LogicalName>jbphh_sornumber</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>50</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="SOR Number" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Auto-generated unique identifier for this SOR" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+        <!-- SOR Status -->
+        <attribute PhysicalName="jbphh_sorstatus">
+          <Type>picklist</Type>
+          <Name>jbphh_sorstatus</Name>
+          <LogicalName>jbphh_sorstatus</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <optionset Name="jbphh_sorstatus" IsGlobal="1"/>
+          <LocalizedNames>
+            <LocalizedName description="SOR Status" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Mission Type -->
+        <attribute PhysicalName="jbphh_missiontype">
+          <Type>picklist</Type>
+          <Name>jbphh_missiontype</Name>
+          <LogicalName>jbphh_missiontype</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <optionset Name="jbphh_missiontype" IsGlobal="1"/>
+          <LocalizedNames>
+            <LocalizedName description="Mission Type" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Requesting Unit (lookup to jbphh_unit) -->
+        <attribute PhysicalName="jbphh_requestingunitid">
+          <Type>lookup</Type>
+          <Name>jbphh_requestingunitid</Name>
+          <LogicalName>jbphh_requestingunitid</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <Targets>jbphh_unit</Targets>
+          <LocalizedNames>
+            <LocalizedName description="Requesting Unit" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Arrival Date -->
+        <attribute PhysicalName="jbphh_arrivaldate">
+          <Type>datetime</Type>
+          <Name>jbphh_arrivaldate</Name>
+          <LogicalName>jbphh_arrivaldate</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <Format>DateOnly</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Arrival Date" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Departure Date -->
+        <attribute PhysicalName="jbphh_departuredate">
+          <Type>datetime</Type>
+          <Name>jbphh_departuredate</Name>
+          <LogicalName>jbphh_departuredate</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <Format>DateOnly</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Departure Date" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Personnel Count -->
+        <attribute PhysicalName="jbphh_personnelcount">
+          <Type>integer</Type>
+          <Name>jbphh_personnelcount</Name>
+          <LogicalName>jbphh_personnelcount</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MinValue>0</MinValue>
+          <MaxValue>10000</MaxValue>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Personnel Count" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Number of personnel requiring reception support" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+        <!-- Vehicles Count -->
+        <attribute PhysicalName="jbphh_vehiclecount">
+          <Type>integer</Type>
+          <Name>jbphh_vehiclecount</Name>
+          <LogicalName>jbphh_vehiclecount</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MinValue>0</MinValue>
+          <MaxValue>1000</MaxValue>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Vehicle Count" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Lodging Required -->
+        <attribute PhysicalName="jbphh_lodgingrequired">
+          <Type>bit</Type>
+          <Name>jbphh_lodgingrequired</Name>
+          <LogicalName>jbphh_lodgingrequired</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Lodging Required" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Dining Required -->
+        <attribute PhysicalName="jbphh_diningrequired">
+          <Type>bit</Type>
+          <Name>jbphh_diningrequired</Name>
+          <LogicalName>jbphh_diningrequired</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Dining Required" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Transportation Required -->
+        <attribute PhysicalName="jbphh_transportationrequired">
+          <Type>bit</Type>
+          <Name>jbphh_transportationrequired</Name>
+          <LogicalName>jbphh_transportationrequired</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Transportation Required" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Description -->
+        <attribute PhysicalName="jbphh_description">
+          <Type>memo</Type>
+          <Name>jbphh_description</Name>
+          <LogicalName>jbphh_description</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>4000</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Description" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Detailed description of mission requirements and special considerations" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+        <!-- Mission Name -->
+        <attribute PhysicalName="jbphh_missionname">
+          <Type>nvarchar</Type>
+          <Name>jbphh_missionname</Name>
+          <LogicalName>jbphh_missionname</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Mission Name" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Approved By (lookup to systemuser) -->
+        <attribute PhysicalName="jbphh_approvedbyid">
+          <Type>lookup</Type>
+          <Name>jbphh_approvedbyid</Name>
+          <LogicalName>jbphh_approvedbyid</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <Targets>systemuser</Targets>
+          <LocalizedNames>
+            <LocalizedName description="Approved By" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Approved Date -->
+        <attribute PhysicalName="jbphh_approveddate">
+          <Type>datetime</Type>
+          <Name>jbphh_approveddate</Name>
+          <LogicalName>jbphh_approveddate</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <Format>DateOnly</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Approved Date" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- POC Name -->
+        <attribute PhysicalName="jbphh_pocname">
+          <Type>nvarchar</Type>
+          <Name>jbphh_pocname</Name>
+          <LogicalName>jbphh_pocname</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="POC Name" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- POC Phone -->
+        <attribute PhysicalName="jbphh_pocphone">
+          <Type>nvarchar</Type>
+          <Name>jbphh_pocphone</Name>
+          <LogicalName>jbphh_pocphone</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>50</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="POC Phone" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- POC Email -->
+        <attribute PhysicalName="jbphh_pocemail">
+          <Type>nvarchar</Type>
+          <Name>jbphh_pocemail</Name>
+          <LogicalName>jbphh_pocemail</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <Format>Email</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="POC Email" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+      </attributes>
+      <EntitySetName>jbphh_sors</EntitySetName>
+      <EntityColor>#0078D4</EntityColor>
+      <IsAuditEnabled>1</IsAuditEnabled>
+      <IsActivity>0</IsActivity>
+      <IsActivityParty>0</IsActivityParty>
+      <IsAvailableOffline>0</IsAvailableOffline>
+      <IsChildEntity>0</IsChildEntity>
+      <IsCustomizable>1</IsCustomizable>
+      <IsImportable>1</IsImportable>
+      <IsIntersect>0</IsIntersect>
+      <IsMailMergeEnabled>0</IsMailMergeEnabled>
+      <IsManaged>0</IsManaged>
+      <IsReadingPaneEnabled>1</IsReadingPaneEnabled>
+      <IsRenameable>1</IsRenameable>
+      <IsValidForQueue>0</IsValidForQueue>
+      <IsVisibleInMobile>1</IsVisibleInMobile>
+      <OwnershipType>UserOwned</OwnershipType>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    </entity>
+  </EntityInfo>
+</Entity>

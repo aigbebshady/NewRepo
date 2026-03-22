@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          WorkflowId="{B7CADB16-FDE0-1234-5678-9ABCDEF01234}"
+          Name="Escalate Unresolved Support Requests"
+          Type="1"
+          Subprocess="0"
+          Category="0"
+          Mode="1"
+          Scope="4"
+          OnDemand="0"
+          TriggerOnCreate="0"
+          TriggerOnDelete="0"
+          TriggerOnUpdate="1"
+          AsyncAutodelete="1"
+          SyncWorkflowLogOnFailure="1"
+          StateCode="1"
+          StatusCode="2"
+          RunAs="1"
+          IsTransacted="1"
+          IntroducedVersion>1.0.0.0</IntroducedVersion>
+          IsCustomizable="1"
+          PrimaryEntity="jbphh_support">
+  <LocalizedNames>
+    <LocalizedName description="Escalate Unresolved Support Requests" languagecode="1033"/>
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Monitors support requests that remain in Requested or Confirmed status when the related SOR arrival date is within 72 hours. Sets the escalation flag and notifies the SOR Planner role via Teams." languagecode="1033"/>
+  </Descriptions>
+  <TriggerOnUpdateAttributeList>
+    <ActivityPointerTriggerAttribute>jbphh_supportstatus</ActivityPointerTriggerAttribute>
+    <ActivityPointerTriggerAttribute>jbphh_isescalated</ActivityPointerTriggerAttribute>
+  </TriggerOnUpdateAttributeList>
+  <InputParameters/>
+  <Steps>
+    <!-- Step 1: Check if escalation flag is set and not already escalated -->
+    <Step StepId="{5E6F7A8B-0005-0001-0005-000000000001}"
+          Name="Check Escalation Conditions"
+          Description="Proceed only when isescalated is set to true for the first time"
+          StepType="4"
+          Rank="1"
+          Sequence="1">
+      <Condition>
+        <Expression xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <Operands>
+            <Operand xsi:type="PropertyOperand">
+              <Property name="jbphh_isescalated"/>
+            </Operand>
+            <Operand xsi:type="ConstantOperand">
+              <Value>1</Value>
+            </Operand>
+          </Operands>
+          <Operator>Equal</Operator>
+        </Expression>
+      </Condition>
+      <Steps>
+        <!-- Step 1a: Create Escalation Notification record -->
+        <Step StepId="{5E6F7A8B-0005-0002-0005-000000000002}"
+              Name="Create Escalation Notification"
+              Description="Creates a notification record for the escalated support request"
+              StepType="2"
+              Rank="1"
+              Sequence="1"
+              EntityName="jbphh_notification"
+              Operation="1">
+          <Attributes>
+            <Attribute name="jbphh_name">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="StringConcatenationExpression">
+                  <Operands>
+                    <Operand xsi:type="ConstantOperand"><Value>ESCALATED Support Request: </Value></Operand>
+                    <Operand xsi:type="PropertyOperand"><Property name="jbphh_name" entity="jbphh_support"/></Operand>
+                  </Operands>
+                </Expression>
+              </Formula>
+            </Attribute>
+            <Attribute name="jbphh_notificationtype">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="ConstantExpression">
+                  <Value>64700006</Value><!-- Support Request Escalated -->
+                </Expression>
+              </Formula>
+            </Attribute>
+            <Attribute name="jbphh_message">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="StringConcatenationExpression">
+                  <Operands>
+                    <Operand xsi:type="ConstantOperand"><Value>ATTENTION: A support request has been escalated and requires immediate action. Support Request: </Value></Operand>
+                    <Operand xsi:type="PropertyOperand"><Property name="jbphh_name" entity="jbphh_support"/></Operand>
+                    <Operand xsi:type="ConstantOperand"><Value>. The arrival date for the associated SOR is approaching. Please coordinate with the provider immediately.</Value></Operand>
+                  </Operands>
+                </Expression>
+              </Formula>
+            </Attribute>
+            <Attribute name="jbphh_channel">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="ConstantExpression">
+                  <Value>Teams</Value>
+                </Expression>
+              </Formula>
+            </Attribute>
+            <Attribute name="jbphh_issent">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="ConstantExpression">
+                  <Value>0</Value>
+                </Expression>
+              </Formula>
+            </Attribute>
+          </Attributes>
+        </Step>
+        <!-- Step 1b: Post high-priority Teams alert to XP channel -->
+        <Step StepId="{5E6F7A8B-0005-0003-0005-000000000003}"
+              Name="Post Urgent Teams Alert"
+              Description="Posts an urgent Teams message to the Plans and Integration channel"
+              StepType="7"
+              Rank="2"
+              Sequence="2"
+              ConnectionReference="jbphh_teams_connection">
+          <Parameters>
+            <Parameter name="teamId">JBPHH-15WG-647LRS-Plans</Parameter>
+            <Parameter name="channelId">Reception-SOR-Alerts</Parameter>
+            <Parameter name="importance">Urgent</Parameter>
+            <Parameter name="messageBody">
+              ⚠️ ESCALATION ALERT: A support request is unresolved with arrival date approaching. Immediate coordinator action required.
+            </Parameter>
+          </Parameters>
+        </Step>
+        <!-- Step 1c: Update Support status to reflect escalation -->
+        <Step StepId="{5E6F7A8B-0005-0004-0005-000000000004}"
+              Name="Log Escalation Timestamp"
+              Description="Records when the escalation was triggered"
+              StepType="2"
+              Rank="3"
+              Sequence="3"
+              EntityName="jbphh_support"
+              Operation="2">
+          <Attributes>
+            <Attribute name="jbphh_notes">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="StringConcatenationExpression">
+                  <Operands>
+                    <Operand xsi:type="PropertyOperand"><Property name="jbphh_notes" entity="jbphh_support"/></Operand>
+                    <Operand xsi:type="ConstantOperand"><Value>&#10;[ESCALATED] Automatic escalation triggered by proximity to SOR arrival date. XP notified via Teams.</Value></Operand>
+                  </Operands>
+                </Expression>
+              </Formula>
+            </Attribute>
+          </Attributes>
+        </Step>
+      </Steps>
+    </Step>
+  </Steps>
+</Workflow>

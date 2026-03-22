@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          WorkflowId="{E4F7A813-CADB-EF01-2345-6789ABCDEF01}"
+          Name="Notify Unit Liaison on PAR Status Change"
+          Type="1"
+          Subprocess="0"
+          Category="0"
+          Mode="1"
+          Scope="4"
+          OnDemand="0"
+          TriggerOnCreate="0"
+          TriggerOnDelete="0"
+          TriggerOnUpdate="1"
+          AsyncAutodelete="1"
+          SyncWorkflowLogOnFailure="1"
+          StateCode="1"
+          StatusCode="2"
+          RunAs="1"
+          IsTransacted="1"
+          IntroducedVersion="1.0.0.0"
+          IsCustomizable="1"
+          PrimaryEntity="jbphh_par">
+  <LocalizedNames>
+    <LocalizedName description="Notify Unit Liaison on PAR Status Change" languagecode="1033"/>
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="When a PAR status or XP Decision changes, notifies the submitting unit liaison via email and creates a notification record." languagecode="1033"/>
+  </Descriptions>
+  <TriggerOnUpdateAttributeList>
+    <ActivityPointerTriggerAttribute>jbphh_parstatus</ActivityPointerTriggerAttribute>
+    <ActivityPointerTriggerAttribute>jbphh_xpdecision</ActivityPointerTriggerAttribute>
+  </TriggerOnUpdateAttributeList>
+  <InputParameters/>
+  <Steps>
+    <!-- Step 1: Create PAR Notification record -->
+    <Step StepId="{2B3C4D5E-0002-0001-0002-000000000001}"
+          Name="Create PAR Status Change Notification"
+          Description="Creates a notification record for the PAR status change"
+          StepType="2"
+          Rank="1"
+          Sequence="1"
+          EntityName="jbphh_notification"
+          Operation="1">
+      <Attributes>
+        <Attribute name="jbphh_name">
+          <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Expression xsi:type="StringConcatenationExpression">
+              <Operands>
+                <Operand xsi:type="ConstantOperand"><Value>PAR Status Updated: </Value></Operand>
+                <Operand xsi:type="PropertyOperand"><Property name="jbphh_name" entity="jbphh_par"/></Operand>
+              </Operands>
+            </Expression>
+          </Formula>
+        </Attribute>
+        <Attribute name="jbphh_notificationtype">
+          <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Expression xsi:type="ConstantExpression">
+              <Value>64700003</Value><!-- PAR Status Change -->
+            </Expression>
+          </Formula>
+        </Attribute>
+        <Attribute name="jbphh_message">
+          <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Expression xsi:type="StringConcatenationExpression">
+              <Operands>
+                <Operand xsi:type="ConstantOperand"><Value>Your Pre-Arrival Request has been updated. PAR: </Value></Operand>
+                <Operand xsi:type="PropertyOperand"><Property name="jbphh_name" entity="jbphh_par"/></Operand>
+                <Operand xsi:type="ConstantOperand"><Value>. Please log in to the JBPHH Reception SOR system for details.</Value></Operand>
+              </Operands>
+            </Expression>
+          </Formula>
+        </Attribute>
+        <Attribute name="jbphh_channel">
+          <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Expression xsi:type="ConstantExpression">
+              <Value>Email</Value>
+            </Expression>
+          </Formula>
+        </Attribute>
+        <Attribute name="jbphh_issent">
+          <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Expression xsi:type="ConstantExpression">
+              <Value>0</Value>
+            </Expression>
+          </Formula>
+        </Attribute>
+      </Attributes>
+    </Step>
+    <!-- Step 2: Send Email to record owner / unit liaison -->
+    <Step StepId="{2B3C4D5E-0002-0002-0002-000000000002}"
+          Name="Send Email to Unit Liaison"
+          Description="Sends an email notification to the PAR owner (unit liaison)"
+          StepType="7"
+          Rank="2"
+          Sequence="2"
+          EntityName="email"
+          Operation="1">
+      <Attributes>
+        <Attribute name="subject">
+          <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Expression xsi:type="StringConcatenationExpression">
+              <Operands>
+                <Operand xsi:type="ConstantOperand"><Value>[JBPHH SOR] PAR Status Update: </Value></Operand>
+                <Operand xsi:type="PropertyOperand"><Property name="jbphh_name" entity="jbphh_par"/></Operand>
+              </Operands>
+            </Expression>
+          </Formula>
+        </Attribute>
+        <Attribute name="description">
+          <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Expression xsi:type="StringConcatenationExpression">
+              <Operands>
+                <Operand xsi:type="ConstantOperand"><Value>Your Pre-Arrival Request status has been updated in the JBPHH Reception SOR system. Please log in to review the current status and any XP comments.</Value></Operand>
+              </Operands>
+            </Expression>
+          </Formula>
+        </Attribute>
+      </Attributes>
+    </Step>
+  </Steps>
+</Workflow>

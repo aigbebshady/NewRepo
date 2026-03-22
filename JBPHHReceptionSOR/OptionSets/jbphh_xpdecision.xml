@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<optionsets>
+  <optionset Name="jbphh_xpdecision" localizedName="XP Decision" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <OptionSetType>picklist</OptionSetType>
+    <IsGlobal>1</IsGlobal>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsCustomOptionSet>1</IsCustomOptionSet>
+    <options>
+      <option value="64700000">
+        <labels>
+          <label description="Pending" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700001">
+        <labels>
+          <label description="Approved" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700002">
+        <labels>
+          <label description="Approved with Conditions" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700003">
+        <labels>
+          <label description="Denied" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700004">
+        <labels>
+          <label description="Deferred" languagecode="1033"/>
+        </labels>
+      </option>
+    </options>
+    <LocalizedNames>
+      <LocalizedName description="XP Decision" languagecode="1033"/>
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Plans and Integration (XP) decision on a Pre-Arrival Request" languagecode="1033"/>
+    </Descriptions>
+  </optionset>
+</optionsets>

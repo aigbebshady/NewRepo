@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<optionsets>
+  <optionset Name="jbphh_parstatus" localizedName="PAR Status" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <OptionSetType>picklist</OptionSetType>
+    <IsGlobal>1</IsGlobal>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsCustomOptionSet>1</IsCustomOptionSet>
+    <options>
+      <option value="64700000">
+        <labels>
+          <label description="Draft" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700001">
+        <labels>
+          <label description="Submitted" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700002">
+        <labels>
+          <label description="Under Review" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700003">
+        <labels>
+          <label description="Approved" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700004">
+        <labels>
+          <label description="Denied" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700005">
+        <labels>
+          <label description="Cancelled" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700006">
+        <labels>
+          <label description="Completed" languagecode="1033"/>
+        </labels>
+      </option>
+    </options>
+    <LocalizedNames>
+      <LocalizedName description="PAR Status" languagecode="1033"/>
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Current status of a Pre-Arrival Request" languagecode="1033"/>
+    </Descriptions>
+  </optionset>
+</optionsets>

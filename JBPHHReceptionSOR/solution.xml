@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.24.10379" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CRMExport" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>JBPHHReceptionSOR</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="JBPHH Reception SOR System" languagecode="1033"/>
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Reception Support Statement of Requirements Management System for 15 WG / 647 LRS Plans and Integration, Joint Base Pearl Harbor-Hickam. UNCLASSIFIED." languagecode="1033"/>
+    </Descriptions>
+    <Version>1.0.0.0</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>jbphh</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="JBPHH Publisher" languagecode="1033"/>
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="Publisher for Joint Base Pearl Harbor-Hickam Power Platform solutions" languagecode="1033"/>
+      </Descriptions>
+      <EMailAddress/>
+      <SupportingWebsiteUrl/>
+      <CustomizationPrefix>jbphh</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>64700</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City/>
+          <County/>
+          <Country/>
+          <Fax/>
+          <FreightTermsCode xsi:nil="true"/>
+          <ImportSequenceNumber xsi:nil="true"/>
+          <Latitude xsi:nil="true"/>
+          <Line1/>
+          <Line2/>
+          <Line3/>
+          <Longitude xsi:nil="true"/>
+          <Name/>
+          <PostalCode/>
+          <PostOfficeBox/>
+          <PrimaryContactName/>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince/>
+          <Telephone1/>
+          <Telephone2/>
+          <Telephone3/>
+          <TimeZoneRuleVersionNumber xsi:nil="true"/>
+          <UPSZone/>
+          <UTCOffset xsi:nil="true"/>
+          <UTCConversionTimeZoneCode xsi:nil="true"/>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <!-- Global Option Sets (type=9) -->
+      <RootComponent type="9"  schemaName="jbphh_missiontype"              behavior="0"/>
+      <RootComponent type="9"  schemaName="jbphh_parstatus"                behavior="0"/>
+      <RootComponent type="9"  schemaName="jbphh_xpdecision"               behavior="0"/>
+      <RootComponent type="9"  schemaName="jbphh_sorstatus"                behavior="0"/>
+      <RootComponent type="9"  schemaName="jbphh_taskstatus"               behavior="0"/>
+      <RootComponent type="9"  schemaName="jbphh_taskpriority"             behavior="0"/>
+      <RootComponent type="9"  schemaName="jbphh_supportstatus"            behavior="0"/>
+      <RootComponent type="9"  schemaName="jbphh_notificationtype"         behavior="0"/>
+      <!-- Entities (type=1) -->
+      <RootComponent type="1"  id="{C0D3E4F5-A6B7-89CD-EF01-234567890ABC}" behavior="0"/>
+      <RootComponent type="1"  id="{D1E4F506-B7C8-9DEF-0123-456789ABCDEF}" behavior="0"/>
+      <RootComponent type="1"  id="{E2F5A607-C8D9-EF01-2345-6789ABCDEF01}" behavior="0"/>
+      <RootComponent type="1"  id="{F3A6B708-D9E0-F012-3456-789ABCDEF012}" behavior="0"/>
+      <RootComponent type="1"  id="{A4B7C809-E0F1-0123-4567-89ABCDEF0123}" behavior="0"/>
+      <RootComponent type="1"  id="{B5C8D90A-F1A2-1234-5678-9ABCDEF01234}" behavior="0"/>
+      <!-- Security Roles (type=20) -->
+      <RootComponent type="20" id="{C6D9E00B-A2B3-2345-6789-ABCDEF012345}" behavior="0"/>
+      <RootComponent type="20" id="{D7E0F10C-B3C4-3456-789A-BCDEF0123456}" behavior="0"/>
+      <RootComponent type="20" id="{E8F1A20D-C4D5-4567-89AB-CDEF01234567}" behavior="0"/>
+      <RootComponent type="20" id="{F9A2B30E-D5E6-5678-9ABC-DEF012345678}" behavior="0"/>
+      <RootComponent type="20" id="{A0B3C40F-E6F7-6789-ABCD-EF0123456789}" behavior="0"/>
+      <!-- Workflows / Cloud Flows (type=29) -->
+      <RootComponent type="29" id="{D3E6F712-B9CA-9DEF-0123-456789ABCDEF}" behavior="0"/>
+      <RootComponent type="29" id="{E4F7A813-CADB-EF01-2345-6789ABCDEF01}" behavior="0"/>
+      <RootComponent type="29" id="{F5A8B914-DBEC-F012-3456-789ABCDEF012}" behavior="0"/>
+      <RootComponent type="29" id="{A6B9CA15-ECFD-0123-4567-89ABCDEF0123}" behavior="0"/>
+      <RootComponent type="29" id="{B7CADB16-FDE0-1234-5678-9ABCDEF01234}" behavior="0"/>
+      <!-- Connection References (type=10026) -->
+      <RootComponent type="10026" schemaName="jbphh_dataverse_connection" behavior="0"/>
+      <RootComponent type="10026" schemaName="jbphh_teams_connection"     behavior="0"/>
+      <!-- Site Map (type=62) -->
+      <RootComponent type="62" id="{FBE0F11A-3124-5678-9ABC-DEF012345678}" behavior="0"/>
+      <!-- App Module (type=80) -->
+      <RootComponent type="80" id="{EAFDE019-2013-4567-89AB-CDEF01234567}" behavior="0"/>
+    </RootComponents>
+    <MissingDependencies/>
+  </SolutionManifest>
+</ImportExportXml>

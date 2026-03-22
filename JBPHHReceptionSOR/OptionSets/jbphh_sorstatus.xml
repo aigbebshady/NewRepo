@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<optionsets>
+  <optionset Name="jbphh_sorstatus" localizedName="SOR Status" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <OptionSetType>picklist</OptionSetType>
+    <IsGlobal>1</IsGlobal>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsCustomOptionSet>1</IsCustomOptionSet>
+    <options>
+      <option value="64700000">
+        <labels>
+          <label description="Draft" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700001">
+        <labels>
+          <label description="Submitted" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700002">
+        <labels>
+          <label description="Under Review" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700003">
+        <labels>
+          <label description="Approved" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700004">
+        <labels>
+          <label description="In Execution" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700005">
+        <labels>
+          <label description="Completed" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700006">
+        <labels>
+          <label description="Cancelled" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700007">
+        <labels>
+          <label description="On Hold" languagecode="1033"/>
+        </labels>
+      </option>
+    </options>
+    <LocalizedNames>
+      <LocalizedName description="SOR Status" languagecode="1033"/>
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Current lifecycle status of a Statement of Requirements" languagecode="1033"/>
+    </Descriptions>
+  </optionset>
+</optionsets>

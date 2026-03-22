@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Pre-Arrival Request" OriginalName="jbphh_par">jbphh_par</Name>
+  <EntityInfo>
+    <entity Name="jbphh_par">
+      <LocalizedNames>
+        <LocalizedName description="Pre-Arrival Request" languagecode="1033"/>
+      </LocalizedNames>
+      <LocalizedCollectionNames>
+        <LocalizedCollectionName description="Pre-Arrival Requests" languagecode="1033"/>
+      </LocalizedCollectionNames>
+      <Descriptions>
+        <Description description="Pre-Arrival Request detailing specific needs of an inbound unit or group" languagecode="1033"/>
+      </Descriptions>
+      <attributes>
+        <!-- Primary Key -->
+        <attribute PhysicalName="jbphh_parid">
+          <Type>primarykey</Type>
+          <Name>jbphh_parid</Name>
+          <LogicalName>jbphh_parid</LogicalName>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <IsPrimaryId>1</IsPrimaryId>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Pre-Arrival Request" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Primary Name -->
+        <attribute PhysicalName="jbphh_name">
+          <Type>nvarchar</Type>
+          <Name>jbphh_name</Name>
+          <LogicalName>jbphh_name</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <IsPrimaryName>1</IsPrimaryName>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="PAR Title" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- PAR Number -->
+        <attribute PhysicalName="jbphh_parnumber">
+          <Type>nvarchar</Type>
+          <Name>jbphh_parnumber</Name>
+          <LogicalName>jbphh_parnumber</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>50</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="PAR Number" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- PAR Status -->
+        <attribute PhysicalName="jbphh_parstatus">
+          <Type>picklist</Type>
+          <Name>jbphh_parstatus</Name>
+          <LogicalName>jbphh_parstatus</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <optionset Name="jbphh_parstatus" IsGlobal="1"/>
+          <LocalizedNames>
+            <LocalizedName description="PAR Status" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- XP Decision -->
+        <attribute PhysicalName="jbphh_xpdecision">
+          <Type>picklist</Type>
+          <Name>jbphh_xpdecision</Name>
+          <LogicalName>jbphh_xpdecision</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <optionset Name="jbphh_xpdecision" IsGlobal="1"/>
+          <LocalizedNames>
+            <LocalizedName description="XP Decision" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Related SOR (lookup) -->
+        <attribute PhysicalName="jbphh_relatedsorid">
+          <Type>lookup</Type>
+          <Name>jbphh_relatedsorid</Name>
+          <LogicalName>jbphh_relatedsorid</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <Targets>jbphh_sor</Targets>
+          <LocalizedNames>
+            <LocalizedName description="Related SOR" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Arrival Date -->
+        <attribute PhysicalName="jbphh_arrivaldate">
+          <Type>datetime</Type>
+          <Name>jbphh_arrivaldate</Name>
+          <LogicalName>jbphh_arrivaldate</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <Format>DateOnly</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Arrival Date" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Departure Date -->
+        <attribute PhysicalName="jbphh_departuredate">
+          <Type>datetime</Type>
+          <Name>jbphh_departuredate</Name>
+          <LogicalName>jbphh_departuredate</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <Format>DateOnly</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Departure Date" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Personnel Count -->
+        <attribute PhysicalName="jbphh_personnelcount">
+          <Type>integer</Type>
+          <Name>jbphh_personnelcount</Name>
+          <LogicalName>jbphh_personnelcount</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MinValue>1</MinValue>
+          <MaxValue>10000</MaxValue>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Personnel Count" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- POC Name -->
+        <attribute PhysicalName="jbphh_pocname">
+          <Type>nvarchar</Type>
+          <Name>jbphh_pocname</Name>
+          <LogicalName>jbphh_pocname</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="POC Name" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- POC Phone -->
+        <attribute PhysicalName="jbphh_pocphone">
+          <Type>nvarchar</Type>
+          <Name>jbphh_pocphone</Name>
+          <LogicalName>jbphh_pocphone</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>50</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="POC Phone" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- POC Email -->
+        <attribute PhysicalName="jbphh_pocemail">
+          <Type>nvarchar</Type>
+          <Name>jbphh_pocemail</Name>
+          <LogicalName>jbphh_pocemail</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <Format>Email</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="POC Email" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Special Requirements -->
+        <attribute PhysicalName="jbphh_specialrequirements">
+          <Type>memo</Type>
+          <Name>jbphh_specialrequirements</Name>
+          <LogicalName>jbphh_specialrequirements</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>4000</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Special Requirements" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Any special or unique support requirements not covered by standard categories" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+        <!-- XP Comments -->
+        <attribute PhysicalName="jbphh_xpcomments">
+          <Type>memo</Type>
+          <Name>jbphh_xpcomments</Name>
+          <LogicalName>jbphh_xpcomments</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>2000</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="XP Comments" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Plans and Integration comments regarding the PAR decision" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+      </attributes>
+      <EntitySetName>jbphh_pars</EntitySetName>
+      <EntityColor>#008272</EntityColor>
+      <IsAuditEnabled>1</IsAuditEnabled>
+      <IsActivity>0</IsActivity>
+      <IsCustomizable>1</IsCustomizable>
+      <IsImportable>1</IsImportable>
+      <IsIntersect>0</IsIntersect>
+      <IsManaged>0</IsManaged>
+      <OwnershipType>UserOwned</OwnershipType>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    </entity>
+  </EntityInfo>
+</Entity>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<optionsets>
+  <optionset Name="jbphh_notificationtype" localizedName="Notification Type" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <OptionSetType>picklist</OptionSetType>
+    <IsGlobal>1</IsGlobal>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsCustomOptionSet>1</IsCustomOptionSet>
+    <options>
+      <option value="64700000">
+        <labels>
+          <label description="SOR Submitted" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700001">
+        <labels>
+          <label description="SOR Approved" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700002">
+        <labels>
+          <label description="SOR Status Change" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700003">
+        <labels>
+          <label description="PAR Status Change" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700004">
+        <labels>
+          <label description="Task Assigned" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700005">
+        <labels>
+          <label description="Task Due Soon" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700006">
+        <labels>
+          <label description="Support Request Escalated" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700007">
+        <labels>
+          <label description="General Alert" languagecode="1033"/>
+        </labels>
+      </option>
+    </options>
+    <LocalizedNames>
+      <LocalizedName description="Notification Type" languagecode="1033"/>
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Category of system notification or alert" languagecode="1033"/>
+    </Descriptions>
+  </optionset>
+</optionsets>

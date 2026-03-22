@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Role xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      id="{E8F1A20D-C4D5-4567-89AB-CDEF01234567}"
+      name="SOR Viewer"
+      ismanaged="0"
+      isinherited="1">
+  <LocalizedNames>
+    <LocalizedName description="SOR Viewer" languagecode="1033"/>
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Read-only access to all SOR data. Intended for commanders, senior staff, and auditors who need situational awareness without edit capability." languagecode="1033"/>
+  </Descriptions>
+  <RolePrivileges>
+    <!-- Read-only access to all custom entities (org-wide) -->
+    <RolePrivilege name="prvReadjbphh_sor"          level="8"/>
+    <RolePrivilege name="prvReadjbphh_par"          level="8"/>
+    <RolePrivilege name="prvReadjbphh_task"         level="8"/>
+    <RolePrivilege name="prvReadjbphh_support"      level="8"/>
+    <RolePrivilege name="prvReadjbphh_notification" level="8"/>
+    <RolePrivilege name="prvReadjbphh_unit"         level="8"/>
+  </RolePrivileges>
+</Role>

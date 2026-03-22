@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<optionsets>
+  <optionset Name="jbphh_taskstatus" localizedName="Task Status" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <OptionSetType>picklist</OptionSetType>
+    <IsGlobal>1</IsGlobal>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsCustomOptionSet>1</IsCustomOptionSet>
+    <options>
+      <option value="64700000">
+        <labels>
+          <label description="Not Started" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700001">
+        <labels>
+          <label description="In Progress" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700002">
+        <labels>
+          <label description="Waiting on Others" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700003">
+        <labels>
+          <label description="Completed" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700004">
+        <labels>
+          <label description="Cancelled" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700005">
+        <labels>
+          <label description="Deferred" languagecode="1033"/>
+        </labels>
+      </option>
+    </options>
+    <LocalizedNames>
+      <LocalizedName description="Task Status" languagecode="1033"/>
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Current status of a reception support task" languagecode="1033"/>
+    </Descriptions>
+  </optionset>
+</optionsets>

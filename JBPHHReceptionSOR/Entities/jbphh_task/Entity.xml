@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Reception Task" OriginalName="jbphh_task">jbphh_task</Name>
+  <EntityInfo>
+    <entity Name="jbphh_task">
+      <LocalizedNames>
+        <LocalizedName description="Reception Task" languagecode="1033"/>
+      </LocalizedNames>
+      <LocalizedCollectionNames>
+        <LocalizedCollectionName description="Reception Tasks" languagecode="1033"/>
+      </LocalizedCollectionNames>
+      <Descriptions>
+        <Description description="Individual action items assigned to team members in support of a Statement of Requirements" languagecode="1033"/>
+      </Descriptions>
+      <attributes>
+        <!-- Primary Key -->
+        <attribute PhysicalName="jbphh_taskid">
+          <Type>primarykey</Type>
+          <Name>jbphh_taskid</Name>
+          <LogicalName>jbphh_taskid</LogicalName>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <IsPrimaryId>1</IsPrimaryId>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Reception Task" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Primary Name -->
+        <attribute PhysicalName="jbphh_name">
+          <Type>nvarchar</Type>
+          <Name>jbphh_name</Name>
+          <LogicalName>jbphh_name</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MaxLength>300</MaxLength>
+          <IsPrimaryName>1</IsPrimaryName>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Task Title" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Task Status -->
+        <attribute PhysicalName="jbphh_taskstatus">
+          <Type>picklist</Type>
+          <Name>jbphh_taskstatus</Name>
+          <LogicalName>jbphh_taskstatus</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <optionset Name="jbphh_taskstatus" IsGlobal="1"/>
+          <LocalizedNames>
+            <LocalizedName description="Task Status" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Task Priority -->
+        <attribute PhysicalName="jbphh_taskpriority">
+          <Type>picklist</Type>
+          <Name>jbphh_taskpriority</Name>
+          <LogicalName>jbphh_taskpriority</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <optionset Name="jbphh_taskpriority" IsGlobal="1"/>
+          <LocalizedNames>
+            <LocalizedName description="Task Priority" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Related SOR -->
+        <attribute PhysicalName="jbphh_relatedsorid">
+          <Type>lookup</Type>
+          <Name>jbphh_relatedsorid</Name>
+          <LogicalName>jbphh_relatedsorid</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <Targets>jbphh_sor</Targets>
+          <LocalizedNames>
+            <LocalizedName description="Related SOR" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Assigned To -->
+        <attribute PhysicalName="jbphh_assignedtoid">
+          <Type>lookup</Type>
+          <Name>jbphh_assignedtoid</Name>
+          <LogicalName>jbphh_assignedtoid</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <Targets>systemuser</Targets>
+          <LocalizedNames>
+            <LocalizedName description="Assigned To" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Due Date -->
+        <attribute PhysicalName="jbphh_duedate">
+          <Type>datetime</Type>
+          <Name>jbphh_duedate</Name>
+          <LogicalName>jbphh_duedate</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <Format>DateOnly</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Due Date" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Completed Date -->
+        <attribute PhysicalName="jbphh_completeddate">
+          <Type>datetime</Type>
+          <Name>jbphh_completeddate</Name>
+          <LogicalName>jbphh_completeddate</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <Format>DateOnly</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Completed Date" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Description -->
+        <attribute PhysicalName="jbphh_description">
+          <Type>memo</Type>
+          <Name>jbphh_description</Name>
+          <LogicalName>jbphh_description</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>4000</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Description" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Completion Notes -->
+        <attribute PhysicalName="jbphh_completionnotes">
+          <Type>memo</Type>
+          <Name>jbphh_completionnotes</Name>
+          <LogicalName>jbphh_completionnotes</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>2000</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Completion Notes" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+      </attributes>
+      <EntitySetName>jbphh_tasks</EntitySetName>
+      <EntityColor>#D83B01</EntityColor>
+      <IsAuditEnabled>1</IsAuditEnabled>
+      <IsActivity>0</IsActivity>
+      <IsCustomizable>1</IsCustomizable>
+      <IsImportable>1</IsImportable>
+      <IsIntersect>0</IsIntersect>
+      <IsManaged>0</IsManaged>
+      <OwnershipType>UserOwned</OwnershipType>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    </entity>
+  </EntityInfo>
+</Entity>

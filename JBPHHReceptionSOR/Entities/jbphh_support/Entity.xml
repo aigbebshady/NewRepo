@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Support Request" OriginalName="jbphh_support">jbphh_support</Name>
+  <EntityInfo>
+    <entity Name="jbphh_support">
+      <LocalizedNames>
+        <LocalizedName description="Support Request" languagecode="1033"/>
+      </LocalizedNames>
+      <LocalizedCollectionNames>
+        <LocalizedCollectionName description="Support Requests" languagecode="1033"/>
+      </LocalizedCollectionNames>
+      <Descriptions>
+        <Description description="Individual support service request (lodging, dining, transportation, etc.) tied to a SOR" languagecode="1033"/>
+      </Descriptions>
+      <attributes>
+        <!-- Primary Key -->
+        <attribute PhysicalName="jbphh_supportid">
+          <Type>primarykey</Type>
+          <Name>jbphh_supportid</Name>
+          <LogicalName>jbphh_supportid</LogicalName>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <IsPrimaryId>1</IsPrimaryId>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Support Request" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Primary Name -->
+        <attribute PhysicalName="jbphh_name">
+          <Type>nvarchar</Type>
+          <Name>jbphh_name</Name>
+          <LogicalName>jbphh_name</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MaxLength>300</MaxLength>
+          <IsPrimaryName>1</IsPrimaryName>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Support Request Title" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Support Status -->
+        <attribute PhysicalName="jbphh_supportstatus">
+          <Type>picklist</Type>
+          <Name>jbphh_supportstatus</Name>
+          <LogicalName>jbphh_supportstatus</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <optionset Name="jbphh_supportstatus" IsGlobal="1"/>
+          <LocalizedNames>
+            <LocalizedName description="Support Status" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Related SOR -->
+        <attribute PhysicalName="jbphh_relatedsorid">
+          <Type>lookup</Type>
+          <Name>jbphh_relatedsorid</Name>
+          <LogicalName>jbphh_relatedsorid</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <Targets>jbphh_sor</Targets>
+          <LocalizedNames>
+            <LocalizedName description="Related SOR" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Support Category -->
+        <attribute PhysicalName="jbphh_supportcategory">
+          <Type>nvarchar</Type>
+          <Name>jbphh_supportcategory</Name>
+          <LogicalName>jbphh_supportcategory</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MaxLength>100</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Support Category" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Type of support (e.g. Lodging, Dining, Transportation, Facilities, Equipment)" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+        <!-- Requested By -->
+        <attribute PhysicalName="jbphh_requestedbyid">
+          <Type>lookup</Type>
+          <Name>jbphh_requestedbyid</Name>
+          <LogicalName>jbphh_requestedbyid</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <Targets>systemuser</Targets>
+          <LocalizedNames>
+            <LocalizedName description="Requested By" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Requested Date -->
+        <attribute PhysicalName="jbphh_requesteddate">
+          <Type>datetime</Type>
+          <Name>jbphh_requesteddate</Name>
+          <LogicalName>jbphh_requesteddate</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <Format>DateOnly</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Requested Date" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Quantity -->
+        <attribute PhysicalName="jbphh_quantity">
+          <Type>integer</Type>
+          <Name>jbphh_quantity</Name>
+          <LogicalName>jbphh_quantity</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MinValue>0</MinValue>
+          <MaxValue>100000</MaxValue>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Quantity" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Provider -->
+        <attribute PhysicalName="jbphh_provider">
+          <Type>nvarchar</Type>
+          <Name>jbphh_provider</Name>
+          <LogicalName>jbphh_provider</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Provider" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Organization or office providing the support" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+        <!-- Notes -->
+        <attribute PhysicalName="jbphh_notes">
+          <Type>memo</Type>
+          <Name>jbphh_notes</Name>
+          <LogicalName>jbphh_notes</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>4000</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Notes" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Escalated -->
+        <attribute PhysicalName="jbphh_isescalated">
+          <Type>bit</Type>
+          <Name>jbphh_isescalated</Name>
+          <LogicalName>jbphh_isescalated</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Escalated" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+      </attributes>
+      <EntitySetName>jbphh_supports</EntitySetName>
+      <EntityColor>#7719AA</EntityColor>
+      <IsAuditEnabled>1</IsAuditEnabled>
+      <IsActivity>0</IsActivity>
+      <IsCustomizable>1</IsCustomizable>
+      <IsImportable>1</IsImportable>
+      <IsIntersect>0</IsIntersect>
+      <IsManaged>0</IsManaged>
+      <OwnershipType>UserOwned</OwnershipType>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    </entity>
+  </EntityInfo>
+</Entity>

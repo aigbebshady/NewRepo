@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<optionsets>
+  <optionset Name="jbphh_missiontype" localizedName="Mission Type" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <OptionSetType>picklist</OptionSetType>
+    <IsGlobal>1</IsGlobal>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsCustomOptionSet>1</IsCustomOptionSet>
+    <options>
+      <option value="64700000">
+        <labels>
+          <label description="Training" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700001">
+        <labels>
+          <label description="Exercise" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700002">
+        <labels>
+          <label description="Operation" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700003">
+        <labels>
+          <label description="Conference" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700004">
+        <labels>
+          <label description="Inspection" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700005">
+        <labels>
+          <label description="Distinguished Visitor" languagecode="1033"/>
+        </labels>
+      </option>
+      <option value="64700006">
+        <labels>
+          <label description="Other" languagecode="1033"/>
+        </labels>
+      </option>
+    </options>
+    <LocalizedNames>
+      <LocalizedName description="Mission Type" languagecode="1033"/>
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Type of military mission or event requiring reception support" languagecode="1033"/>
+    </Descriptions>
+  </optionset>
+</optionsets>

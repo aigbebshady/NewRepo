@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Military Unit" OriginalName="jbphh_unit">jbphh_unit</Name>
+  <EntityInfo>
+    <entity Name="jbphh_unit">
+      <LocalizedNames>
+        <LocalizedName description="Military Unit" languagecode="1033"/>
+      </LocalizedNames>
+      <LocalizedCollectionNames>
+        <LocalizedCollectionName description="Military Units" languagecode="1033"/>
+      </LocalizedCollectionNames>
+      <Descriptions>
+        <Description description="Military unit or organization that submits SORs for reception support at JBPHH" languagecode="1033"/>
+      </Descriptions>
+      <attributes>
+        <!-- Primary Key -->
+        <attribute PhysicalName="jbphh_unitid">
+          <Type>primarykey</Type>
+          <Name>jbphh_unitid</Name>
+          <LogicalName>jbphh_unitid</LogicalName>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <IsPrimaryId>1</IsPrimaryId>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Military Unit" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Primary Name -->
+        <attribute PhysicalName="jbphh_name">
+          <Type>nvarchar</Type>
+          <Name>jbphh_name</Name>
+          <LogicalName>jbphh_name</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MaxLength>300</MaxLength>
+          <IsPrimaryName>1</IsPrimaryName>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Unit Name" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Unit Identification Code -->
+        <attribute PhysicalName="jbphh_uic">
+          <Type>nvarchar</Type>
+          <Name>jbphh_uic</Name>
+          <LogicalName>jbphh_uic</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>20</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="UIC" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Unit Identification Code" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+        <!-- Service Branch -->
+        <attribute PhysicalName="jbphh_servicebranch">
+          <Type>nvarchar</Type>
+          <Name>jbphh_servicebranch</Name>
+          <LogicalName>jbphh_servicebranch</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>100</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Service Branch" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="e.g. Army, Navy, Air Force, Marine Corps, Space Force" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+        <!-- Home Station -->
+        <attribute PhysicalName="jbphh_homestation">
+          <Type>nvarchar</Type>
+          <Name>jbphh_homestation</Name>
+          <LogicalName>jbphh_homestation</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Home Station" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- POC Name -->
+        <attribute PhysicalName="jbphh_pocname">
+          <Type>nvarchar</Type>
+          <Name>jbphh_pocname</Name>
+          <LogicalName>jbphh_pocname</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="POC Name" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- POC Phone -->
+        <attribute PhysicalName="jbphh_pocphone">
+          <Type>nvarchar</Type>
+          <Name>jbphh_pocphone</Name>
+          <LogicalName>jbphh_pocphone</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>50</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="POC Phone" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- POC Email -->
+        <attribute PhysicalName="jbphh_pocemail">
+          <Type>nvarchar</Type>
+          <Name>jbphh_pocemail</Name>
+          <LogicalName>jbphh_pocemail</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>200</MaxLength>
+          <Format>Email</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="POC Email" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- DSN -->
+        <attribute PhysicalName="jbphh_dsn">
+          <Type>nvarchar</Type>
+          <Name>jbphh_dsn</Name>
+          <LogicalName>jbphh_dsn</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>20</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="DSN" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Defense Switched Network phone number" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+      </attributes>
+      <EntitySetName>jbphh_units</EntitySetName>
+      <EntityColor>#004E8C</EntityColor>
+      <IsAuditEnabled>1</IsAuditEnabled>
+      <IsActivity>0</IsActivity>
+      <IsCustomizable>1</IsCustomizable>
+      <IsImportable>1</IsImportable>
+      <IsIntersect>0</IsIntersect>
+      <IsManaged>0</IsManaged>
+      <OwnershipType>OrganizationOwned</OwnershipType>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    </entity>
+  </EntityInfo>
+</Entity>

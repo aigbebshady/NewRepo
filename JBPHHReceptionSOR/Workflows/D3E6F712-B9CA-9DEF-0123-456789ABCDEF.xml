@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          WorkflowId="{D3E6F712-B9CA-9DEF-0123-456789ABCDEF}"
+          Name="Notify XP on New SOR Submission"
+          Type="1"
+          Subprocess="0"
+          Category="0"
+          Mode="1"
+          Scope="4"
+          OnDemand="0"
+          TriggerOnCreate="1"
+          TriggerOnDelete="0"
+          AsyncAutodelete="1"
+          SyncWorkflowLogOnFailure="1"
+          StateCode="1"
+          StatusCode="2"
+          RunAs="1"
+          IsTransacted="1"
+          IntroducedVersion="1.0.0.0"
+          IsCustomizable="1"
+          PrimaryEntity="jbphh_sor">
+  <LocalizedNames>
+    <LocalizedName description="Notify XP on New SOR Submission" languagecode="1033"/>
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Sends a Teams notification and creates a SOR Notification record when a new Statement of Requirements is submitted (status = Submitted)." languagecode="1033"/>
+  </Descriptions>
+  <TriggerOnUpdateAttributeList>
+    <ActivityPointerTriggerAttribute>jbphh_sorstatus</ActivityPointerTriggerAttribute>
+  </TriggerOnUpdateAttributeList>
+  <InputParameters/>
+  <Steps>
+    <!-- Step 1: Check condition - SOR status is Submitted -->
+    <Step StepId="{1A2B3C4D-0001-0001-0001-000000000001}"
+          Name="Check SOR Status is Submitted"
+          Description="Only proceed if the SOR has just been set to Submitted"
+          StepType="4"
+          Rank="1"
+          Sequence="1">
+      <Condition>
+        <Expression xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <Operands>
+            <Operand xsi:type="PropertyOperand">
+              <Property name="jbphh_sorstatus" />
+            </Operand>
+            <Operand xsi:type="ConstantOperand">
+              <Value>64700001</Value><!-- Submitted -->
+            </Operand>
+          </Operands>
+          <Operator>Equal</Operator>
+        </Expression>
+      </Condition>
+      <Steps>
+        <!-- Step 1a: Create SOR Notification record -->
+        <Step StepId="{1A2B3C4D-0001-0002-0001-000000000002}"
+              Name="Create SOR Submission Notification Record"
+              Description="Creates a notification record for the SOR submission event"
+              StepType="2"
+              Rank="1"
+              Sequence="1"
+              EntityName="jbphh_notification"
+              Operation="1">
+          <Attributes>
+            <Attribute name="jbphh_name">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="StringConcatenationExpression">
+                  <Operands>
+                    <Operand xsi:type="ConstantOperand"><Value>New SOR Submitted: </Value></Operand>
+                    <Operand xsi:type="PropertyOperand"><Property name="jbphh_name" entity="jbphh_sor"/></Operand>
+                  </Operands>
+                </Expression>
+              </Formula>
+            </Attribute>
+            <Attribute name="jbphh_notificationtype">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="ConstantExpression">
+                  <Value>64700000</Value><!-- SOR Submitted -->
+                </Expression>
+              </Formula>
+            </Attribute>
+            <Attribute name="jbphh_relatedsorid">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="LookupExpression">
+                  <Entity>jbphh_sor</Entity>
+                  <Property name="jbphh_sorid"/>
+                </Expression>
+              </Formula>
+            </Attribute>
+            <Attribute name="jbphh_message">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="StringConcatenationExpression">
+                  <Operands>
+                    <Operand xsi:type="ConstantOperand"><Value>A new Statement of Requirements has been submitted and requires XP review. SOR: </Value></Operand>
+                    <Operand xsi:type="PropertyOperand"><Property name="jbphh_name" entity="jbphh_sor"/></Operand>
+                    <Operand xsi:type="ConstantOperand"><Value>. Please log in to the JBPHH Reception SOR system to review.</Value></Operand>
+                  </Operands>
+                </Expression>
+              </Formula>
+            </Attribute>
+            <Attribute name="jbphh_channel">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="ConstantExpression">
+                  <Value>Teams</Value>
+                </Expression>
+              </Formula>
+            </Attribute>
+            <Attribute name="jbphh_issent">
+              <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Expression xsi:type="ConstantExpression">
+                  <Value>0</Value>
+                </Expression>
+              </Formula>
+            </Attribute>
+          </Attributes>
+        </Step>
+        <!-- Step 1b: Send Teams message via connection reference -->
+        <Step StepId="{1A2B3C4D-0001-0003-0001-000000000003}"
+              Name="Post Teams Message to XP Channel"
+              Description="Posts a message to the 647 LRS Plans and Integration Teams channel"
+              StepType="7"
+              Rank="2"
+              Sequence="2"
+              ConnectionReference="jbphh_teams_connection">
+          <Parameters>
+            <Parameter name="teamId">JBPHH-15WG-647LRS-Plans</Parameter>
+            <Parameter name="channelId">Reception-SOR-Alerts</Parameter>
+            <Parameter name="messageBody">
+              New SOR Submitted - Action Required. Please review in the JBPHH Reception SOR system.
+            </Parameter>
+          </Parameters>
+        </Step>
+      </Steps>
+    </Step>
+  </Steps>
+</Workflow>

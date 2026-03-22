@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Role xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      id="{F9A2B30E-D5E6-5678-9ABC-DEF012345678}"
+      name="Reception Coordinator"
+      ismanaged="0"
+      isinherited="1">
+  <LocalizedNames>
+    <LocalizedName description="Reception Coordinator" languagecode="1033"/>
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="647 LRS / installation support coordinator role. Can manage tasks assigned to them, update support request status, and create notifications. Read access to all SORs and PARs." languagecode="1033"/>
+  </Descriptions>
+  <RolePrivileges>
+    <!-- jbphh_sor: Read all, create/write own BU -->
+    <RolePrivilege name="prvCreatejbphh_sor"    level="4"/>
+    <RolePrivilege name="prvReadjbphh_sor"      level="8"/>
+    <RolePrivilege name="prvWritejbphh_sor"     level="4"/>
+    <RolePrivilege name="prvDeletejbphh_sor"    level="0"/>
+    <RolePrivilege name="prvAppendTojbphh_sor"  level="8"/>
+    <RolePrivilege name="prvAppendjbphh_sor"    level="8"/>
+    <!-- jbphh_par: Read all, create/write BU -->
+    <RolePrivilege name="prvCreatejbphh_par"    level="4"/>
+    <RolePrivilege name="prvReadjbphh_par"      level="8"/>
+    <RolePrivilege name="prvWritejbphh_par"     level="4"/>
+    <RolePrivilege name="prvDeletejbphh_par"    level="0"/>
+    <RolePrivilege name="prvAppendTojbphh_par"  level="8"/>
+    <RolePrivilege name="prvAppendjbphh_par"    level="8"/>
+    <!-- jbphh_task: Full own, read all -->
+    <RolePrivilege name="prvCreatejbphh_task"   level="4"/>
+    <RolePrivilege name="prvReadjbphh_task"     level="8"/>
+    <RolePrivilege name="prvWritejbphh_task"    level="2"/>
+    <RolePrivilege name="prvDeletejbphh_task"   level="1"/>
+    <RolePrivilege name="prvAssignjbphh_task"   level="0"/>
+    <!-- jbphh_support: Create, read all, write own -->
+    <RolePrivilege name="prvCreatejbphh_support" level="4"/>
+    <RolePrivilege name="prvReadjbphh_support"   level="8"/>
+    <RolePrivilege name="prvWritejbphh_support"  level="4"/>
+    <RolePrivilege name="prvDeletejbphh_support" level="0"/>
+    <!-- jbphh_notification: Read all, create own -->
+    <RolePrivilege name="prvCreatejbphh_notification" level="1"/>
+    <RolePrivilege name="prvReadjbphh_notification"   level="8"/>
+    <RolePrivilege name="prvWritejbphh_notification"  level="1"/>
+    <RolePrivilege name="prvDeletejbphh_notification" level="0"/>
+    <!-- jbphh_unit: Read all -->
+    <RolePrivilege name="prvReadjbphh_unit"     level="8"/>
+  </RolePrivileges>
+</Role>

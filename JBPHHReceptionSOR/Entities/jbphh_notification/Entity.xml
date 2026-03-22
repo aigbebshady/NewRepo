@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="SOR Notification" OriginalName="jbphh_notification">jbphh_notification</Name>
+  <EntityInfo>
+    <entity Name="jbphh_notification">
+      <LocalizedNames>
+        <LocalizedName description="SOR Notification" languagecode="1033"/>
+      </LocalizedNames>
+      <LocalizedCollectionNames>
+        <LocalizedCollectionName description="SOR Notifications" languagecode="1033"/>
+      </LocalizedCollectionNames>
+      <Descriptions>
+        <Description description="System-generated notifications sent to stakeholders for SOR lifecycle events" languagecode="1033"/>
+      </Descriptions>
+      <attributes>
+        <!-- Primary Key -->
+        <attribute PhysicalName="jbphh_notificationid">
+          <Type>primarykey</Type>
+          <Name>jbphh_notificationid</Name>
+          <LogicalName>jbphh_notificationid</LogicalName>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <IsPrimaryId>1</IsPrimaryId>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="SOR Notification" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Primary Name -->
+        <attribute PhysicalName="jbphh_name">
+          <Type>nvarchar</Type>
+          <Name>jbphh_name</Name>
+          <LogicalName>jbphh_name</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MaxLength>300</MaxLength>
+          <IsPrimaryName>1</IsPrimaryName>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Notification Subject" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Notification Type -->
+        <attribute PhysicalName="jbphh_notificationtype">
+          <Type>picklist</Type>
+          <Name>jbphh_notificationtype</Name>
+          <LogicalName>jbphh_notificationtype</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <optionset Name="jbphh_notificationtype" IsGlobal="1"/>
+          <LocalizedNames>
+            <LocalizedName description="Notification Type" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Related SOR -->
+        <attribute PhysicalName="jbphh_relatedsorid">
+          <Type>lookup</Type>
+          <Name>jbphh_relatedsorid</Name>
+          <LogicalName>jbphh_relatedsorid</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <Targets>jbphh_sor</Targets>
+          <LocalizedNames>
+            <LocalizedName description="Related SOR" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Recipient -->
+        <attribute PhysicalName="jbphh_recipientid">
+          <Type>lookup</Type>
+          <Name>jbphh_recipientid</Name>
+          <LogicalName>jbphh_recipientid</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <Targets>systemuser</Targets>
+          <LocalizedNames>
+            <LocalizedName description="Recipient" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Message -->
+        <attribute PhysicalName="jbphh_message">
+          <Type>memo</Type>
+          <Name>jbphh_message</Name>
+          <LogicalName>jbphh_message</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <MaxLength>4000</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Message" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Sent -->
+        <attribute PhysicalName="jbphh_issent">
+          <Type>bit</Type>
+          <Name>jbphh_issent</Name>
+          <LogicalName>jbphh_issent</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Sent" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Sent Date -->
+        <attribute PhysicalName="jbphh_sentdate">
+          <Type>datetime</Type>
+          <Name>jbphh_sentdate</Name>
+          <LogicalName>jbphh_sentdate</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <Format>DateAndTime</Format>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Sent Date" languagecode="1033"/>
+          </LocalizedNames>
+        </attribute>
+        <!-- Channel -->
+        <attribute PhysicalName="jbphh_channel">
+          <Type>nvarchar</Type>
+          <Name>jbphh_channel</Name>
+          <LogicalName>jbphh_channel</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <MaxLength>100</MaxLength>
+          <IsCustomField>1</IsCustomField>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <LocalizedNames>
+            <LocalizedName description="Channel" languagecode="1033"/>
+          </LocalizedNames>
+          <Descriptions>
+            <Description description="Delivery channel used (Email, Teams, SMS)" languagecode="1033"/>
+          </Descriptions>
+        </attribute>
+      </attributes>
+      <EntitySetName>jbphh_notifications</EntitySetName>
+      <EntityColor>#498205</EntityColor>
+      <IsAuditEnabled>1</IsAuditEnabled>
+      <IsActivity>0</IsActivity>
+      <IsCustomizable>1</IsCustomizable>
+      <IsImportable>1</IsImportable>
+      <IsIntersect>0</IsIntersect>
+      <IsManaged>0</IsManaged>
+      <OwnershipType>UserOwned</OwnershipType>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    </entity>
+  </EntityInfo>
+</Entity>
