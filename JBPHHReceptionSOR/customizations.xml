@@ -418,24 +418,6 @@
   </Roles>
 
   
-  <connectionreferences>
-    <connectionreference connectionreferencelogicalname="jbphh_dataverse_connection">
-      <connectionreferencedisplayname>JBPHH Dataverse Connection</connectionreferencedisplayname>
-      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
-      <iscustomizable>1</iscustomizable>
-      <statecode>0</statecode>
-      <statuscode>1</statuscode>
-    </connectionreference>
-    <connectionreference connectionreferencelogicalname="jbphh_teams_connection">
-      <connectionreferencedisplayname>JBPHH Microsoft Teams Connection</connectionreferencedisplayname>
-      <connectorid>/providers/Microsoft.PowerApps/apis/shared_teams</connectorid>
-      <iscustomizable>1</iscustomizable>
-      <statecode>0</statecode>
-      <statuscode>1</statuscode>
-    </connectionreference>
-  </connectionreferences>
-
-  
   <Workflows>
     <Workflow WorkflowId="{D3E6F712-B9CA-9DEF-0123-456789ABCDEF}"
               Name="Notify XP on New SOR Submission"

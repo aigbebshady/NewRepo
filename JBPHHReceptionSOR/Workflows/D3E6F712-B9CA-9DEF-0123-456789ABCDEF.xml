@@ -23,7 +23,7 @@
     <LocalizedName description="Notify XP on New SOR Submission" languagecode="1033"/>
   </LocalizedNames>
   <Descriptions>
-    <Description description="Sends a Teams notification and creates a SOR Notification record when a new Statement of Requirements is submitted (status = Submitted)." languagecode="1033"/>
+    <Description description="Creates a SOR Notification record when a new Statement of Requirements is submitted (status = Submitted)." languagecode="1033"/>
   </Descriptions>
   <TriggerOnUpdateAttributeList>
     <ActivityPointerTriggerAttribute>jbphh_sorstatus</ActivityPointerTriggerAttribute>
@@ -112,22 +112,6 @@
               </Formula>
             </Attribute>
           </Attributes>
-        </Step>
-        
-        <Step StepId="{1A2B3C4D-0001-0003-0001-000000000003}"
-              Name="Post Teams Message to XP Channel"
-              Description="Posts a message to the 647 LRS Plans and Integration Teams channel"
-              StepType="7"
-              Rank="2"
-              Sequence="2"
-              ConnectionReference="jbphh_teams_connection">
-          <Parameters>
-            <Parameter name="teamId">JBPHH-15WG-647LRS-Plans</Parameter>
-            <Parameter name="channelId">Reception-SOR-Alerts</Parameter>
-            <Parameter name="messageBody">
-              New SOR Submitted - Action Required. Please review in the JBPHH Reception SOR system.
-            </Parameter>
-          </Parameters>
         </Step>
       </Steps>
     </Step>

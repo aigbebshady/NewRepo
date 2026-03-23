@@ -24,7 +24,7 @@
     <LocalizedName description="Notify Assignee on Task Assignment" languagecode="1033"/>
   </LocalizedNames>
   <Descriptions>
-    <Description description="When a reception task is created or its assignee changes, sends a Teams and email notification to the newly assigned user." languagecode="1033"/>
+    <Description description="When a reception task is created or its assignee changes, creates a notification record for the newly assigned user." languagecode="1033"/>
   </Descriptions>
   <TriggerOnUpdateAttributeList>
     <ActivityPointerTriggerAttribute>jbphh_assignedtoid</ActivityPointerTriggerAttribute>
@@ -113,19 +113,6 @@
               </Formula>
             </Attribute>
           </Attributes>
-        </Step>
-        
-        <Step StepId="{3C4D5E6F-0003-0003-0003-000000000003}"
-              Name="Send Teams Message to Assignee"
-              Description="Sends a direct Teams message to the task assignee"
-              StepType="7"
-              Rank="2"
-              Sequence="2"
-              ConnectionReference="jbphh_teams_connection">
-          <Parameters>
-            <Parameter name="recipientType">User</Parameter>
-            <Parameter name="messageType">DirectMessage</Parameter>
-          </Parameters>
         </Step>
       </Steps>
     </Step>

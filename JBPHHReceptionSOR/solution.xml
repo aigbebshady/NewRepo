@@ -82,10 +82,7 @@
       <RootComponent type="29" id="{F5A8B914-DBEC-F012-3456-789ABCDEF012}" behavior="0"/>
       <RootComponent type="29" id="{A6B9CA15-ECFD-0123-4567-89ABCDEF0123}" behavior="0"/>
       <RootComponent type="29" id="{B7CADB16-FDE0-1234-5678-9ABCDEF01234}" behavior="0"/>
-      
-      <RootComponent type="10026" schemaName="jbphh_dataverse_connection" behavior="0"/>
-      <RootComponent type="10026" schemaName="jbphh_teams_connection"     behavior="0"/>
-      
+
       <RootComponent type="62" id="{FBE0F11A-3124-5678-9ABC-DEF012345678}" behavior="0"/>
       
       <RootComponent type="80" id="{EAFDE019-2013-4567-89AB-CDEF01234567}" behavior="0"/>
