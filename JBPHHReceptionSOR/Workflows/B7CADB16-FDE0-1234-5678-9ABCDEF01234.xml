@@ -17,7 +17,7 @@
           StatusCode="2"
           RunAs="1"
           IsTransacted="1"
-          IntroducedVersion>1.0.0.0</IntroducedVersion>
+          IntroducedVersion="1.0.0.0"
           IsCustomizable="1"
           PrimaryEntity="jbphh_support">
   <LocalizedNames>
