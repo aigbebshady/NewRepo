@@ -13,7 +13,7 @@
         <Description description="Individual support service request (lodging, dining, transportation, etc.) tied to a SOR" languagecode="1033"/>
       </Descriptions>
       <attributes>
-        <!-- Primary Key -->
+        
         <attribute PhysicalName="jbphh_supportid">
           <Type>primarykey</Type>
           <Name>jbphh_supportid</Name>
@@ -27,7 +27,7 @@
             <LocalizedName description="Support Request" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Primary Name -->
+        
         <attribute PhysicalName="jbphh_name">
           <Type>nvarchar</Type>
           <Name>jbphh_name</Name>
@@ -42,7 +42,7 @@
             <LocalizedName description="Support Request Title" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Support Status -->
+        
         <attribute PhysicalName="jbphh_supportstatus">
           <Type>picklist</Type>
           <Name>jbphh_supportstatus</Name>
@@ -56,7 +56,7 @@
             <LocalizedName description="Support Status" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Related SOR -->
+        
         <attribute PhysicalName="jbphh_relatedsorid">
           <Type>lookup</Type>
           <Name>jbphh_relatedsorid</Name>
@@ -70,7 +70,7 @@
             <LocalizedName description="Related SOR" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Support Category -->
+        
         <attribute PhysicalName="jbphh_supportcategory">
           <Type>nvarchar</Type>
           <Name>jbphh_supportcategory</Name>
@@ -87,7 +87,7 @@
             <Description description="Type of support (e.g. Lodging, Dining, Transportation, Facilities, Equipment)" languagecode="1033"/>
           </Descriptions>
         </attribute>
-        <!-- Requested By -->
+        
         <attribute PhysicalName="jbphh_requestedbyid">
           <Type>lookup</Type>
           <Name>jbphh_requestedbyid</Name>
@@ -101,7 +101,7 @@
             <LocalizedName description="Requested By" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Requested Date -->
+        
         <attribute PhysicalName="jbphh_requesteddate">
           <Type>datetime</Type>
           <Name>jbphh_requesteddate</Name>
@@ -115,7 +115,7 @@
             <LocalizedName description="Requested Date" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Quantity -->
+        
         <attribute PhysicalName="jbphh_quantity">
           <Type>integer</Type>
           <Name>jbphh_quantity</Name>
@@ -130,7 +130,7 @@
             <LocalizedName description="Quantity" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Provider -->
+        
         <attribute PhysicalName="jbphh_provider">
           <Type>nvarchar</Type>
           <Name>jbphh_provider</Name>
@@ -147,7 +147,7 @@
             <Description description="Organization or office providing the support" languagecode="1033"/>
           </Descriptions>
         </attribute>
-        <!-- Notes -->
+        
         <attribute PhysicalName="jbphh_notes">
           <Type>memo</Type>
           <Name>jbphh_notes</Name>
@@ -161,7 +161,7 @@
             <LocalizedName description="Notes" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Escalated -->
+        
         <attribute PhysicalName="jbphh_isescalated">
           <Type>bit</Type>
           <Name>jbphh_isescalated</Name>

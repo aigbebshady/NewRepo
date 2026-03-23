@@ -13,7 +13,7 @@
         <Description description="System-generated notifications sent to stakeholders for SOR lifecycle events" languagecode="1033"/>
       </Descriptions>
       <attributes>
-        <!-- Primary Key -->
+        
         <attribute PhysicalName="jbphh_notificationid">
           <Type>primarykey</Type>
           <Name>jbphh_notificationid</Name>
@@ -27,7 +27,7 @@
             <LocalizedName description="SOR Notification" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Primary Name -->
+        
         <attribute PhysicalName="jbphh_name">
           <Type>nvarchar</Type>
           <Name>jbphh_name</Name>
@@ -42,7 +42,7 @@
             <LocalizedName description="Notification Subject" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Notification Type -->
+        
         <attribute PhysicalName="jbphh_notificationtype">
           <Type>picklist</Type>
           <Name>jbphh_notificationtype</Name>
@@ -56,7 +56,7 @@
             <LocalizedName description="Notification Type" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Related SOR -->
+        
         <attribute PhysicalName="jbphh_relatedsorid">
           <Type>lookup</Type>
           <Name>jbphh_relatedsorid</Name>
@@ -70,7 +70,7 @@
             <LocalizedName description="Related SOR" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Recipient -->
+        
         <attribute PhysicalName="jbphh_recipientid">
           <Type>lookup</Type>
           <Name>jbphh_recipientid</Name>
@@ -84,7 +84,7 @@
             <LocalizedName description="Recipient" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Message -->
+        
         <attribute PhysicalName="jbphh_message">
           <Type>memo</Type>
           <Name>jbphh_message</Name>
@@ -98,7 +98,7 @@
             <LocalizedName description="Message" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Sent -->
+        
         <attribute PhysicalName="jbphh_issent">
           <Type>bit</Type>
           <Name>jbphh_issent</Name>
@@ -111,7 +111,7 @@
             <LocalizedName description="Sent" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Sent Date -->
+        
         <attribute PhysicalName="jbphh_sentdate">
           <Type>datetime</Type>
           <Name>jbphh_sentdate</Name>
@@ -125,7 +125,7 @@
             <LocalizedName description="Sent Date" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Channel -->
+        
         <attribute PhysicalName="jbphh_channel">
           <Type>nvarchar</Type>
           <Name>jbphh_channel</Name>

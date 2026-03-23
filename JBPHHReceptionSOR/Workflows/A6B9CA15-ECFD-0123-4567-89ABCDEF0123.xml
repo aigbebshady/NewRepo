@@ -31,7 +31,7 @@
   </TriggerOnUpdateAttributeList>
   <InputParameters/>
   <Steps>
-    <!-- Step 1: Check SOR status is Approved -->
+    
     <Step StepId="{4D5E6F7A-0004-0001-0004-000000000001}"
           Name="Check SOR Status is Approved"
           Description="Only proceed when SOR moves to Approved status"
@@ -45,14 +45,14 @@
               <Property name="jbphh_sorstatus"/>
             </Operand>
             <Operand xsi:type="ConstantOperand">
-              <Value>64700003</Value><!-- Approved -->
+              <Value>64700003</Value>
             </Operand>
           </Operands>
           <Operator>Equal</Operator>
         </Expression>
       </Condition>
       <Steps>
-        <!-- Step 1a: Set Approved Date -->
+        
         <Step StepId="{4D5E6F7A-0004-0002-0004-000000000002}"
               Name="Set Approved Date"
               Description="Records the date the SOR was approved"
@@ -71,7 +71,7 @@
             </Attribute>
           </Attributes>
         </Step>
-        <!-- Step 1b: Create Approval Notification record -->
+        
         <Step StepId="{4D5E6F7A-0004-0003-0004-000000000003}"
               Name="Create SOR Approval Notification"
               Description="Creates a notification record confirming SOR approval"
@@ -94,7 +94,7 @@
             <Attribute name="jbphh_notificationtype">
               <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Expression xsi:type="ConstantExpression">
-                  <Value>64700001</Value><!-- SOR Approved -->
+                  <Value>64700001</Value>
                 </Expression>
               </Formula>
             </Attribute>
@@ -133,7 +133,7 @@
             </Attribute>
           </Attributes>
         </Step>
-        <!-- Step 1c: Send Email to unit POC -->
+        
         <Step StepId="{4D5E6F7A-0004-0004-0004-000000000004}"
               Name="Send Approval Email to SOR Owner"
               Description="Sends an approval confirmation email to the SOR record owner"
@@ -164,7 +164,7 @@
         </Step>
       </Steps>
     </Step>
-    <!-- Step 2: Check SOR status is Denied/On Hold for separate notification -->
+    
     <Step StepId="{4D5E6F7A-0004-0005-0004-000000000005}"
           Name="Check SOR Status Change (Other)"
           Description="Handle other status transitions with a general notification"
@@ -178,7 +178,7 @@
               <Property name="jbphh_sorstatus"/>
             </Operand>
             <Operand xsi:type="ConstantOperand">
-              <Value>64700007</Value><!-- On Hold -->
+              <Value>64700007</Value>
             </Operand>
           </Operands>
           <Operator>Equal</Operator>
@@ -206,7 +206,7 @@
             <Attribute name="jbphh_notificationtype">
               <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Expression xsi:type="ConstantExpression">
-                  <Value>64700002</Value><!-- SOR Status Change -->
+                  <Value>64700002</Value>
                 </Expression>
               </Formula>
             </Attribute>

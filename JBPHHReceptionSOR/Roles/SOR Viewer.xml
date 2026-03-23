@@ -11,7 +11,7 @@
     <Description description="Read-only access to all SOR data. Intended for commanders, senior staff, and auditors who need situational awareness without edit capability." languagecode="1033"/>
   </Descriptions>
   <RolePrivileges>
-    <!-- Read-only access to all custom entities (org-wide) -->
+    
     <RolePrivilege name="prvReadjbphh_sor"          level="8"/>
     <RolePrivilege name="prvReadjbphh_par"          level="8"/>
     <RolePrivilege name="prvReadjbphh_task"         level="8"/>

@@ -13,7 +13,7 @@
         <Description description="Individual action items assigned to team members in support of a Statement of Requirements" languagecode="1033"/>
       </Descriptions>
       <attributes>
-        <!-- Primary Key -->
+        
         <attribute PhysicalName="jbphh_taskid">
           <Type>primarykey</Type>
           <Name>jbphh_taskid</Name>
@@ -27,7 +27,7 @@
             <LocalizedName description="Reception Task" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Primary Name -->
+        
         <attribute PhysicalName="jbphh_name">
           <Type>nvarchar</Type>
           <Name>jbphh_name</Name>
@@ -42,7 +42,7 @@
             <LocalizedName description="Task Title" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Task Status -->
+        
         <attribute PhysicalName="jbphh_taskstatus">
           <Type>picklist</Type>
           <Name>jbphh_taskstatus</Name>
@@ -56,7 +56,7 @@
             <LocalizedName description="Task Status" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Task Priority -->
+        
         <attribute PhysicalName="jbphh_taskpriority">
           <Type>picklist</Type>
           <Name>jbphh_taskpriority</Name>
@@ -70,7 +70,7 @@
             <LocalizedName description="Task Priority" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Related SOR -->
+        
         <attribute PhysicalName="jbphh_relatedsorid">
           <Type>lookup</Type>
           <Name>jbphh_relatedsorid</Name>
@@ -84,7 +84,7 @@
             <LocalizedName description="Related SOR" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Assigned To -->
+        
         <attribute PhysicalName="jbphh_assignedtoid">
           <Type>lookup</Type>
           <Name>jbphh_assignedtoid</Name>
@@ -98,7 +98,7 @@
             <LocalizedName description="Assigned To" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Due Date -->
+        
         <attribute PhysicalName="jbphh_duedate">
           <Type>datetime</Type>
           <Name>jbphh_duedate</Name>
@@ -112,7 +112,7 @@
             <LocalizedName description="Due Date" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Completed Date -->
+        
         <attribute PhysicalName="jbphh_completeddate">
           <Type>datetime</Type>
           <Name>jbphh_completeddate</Name>
@@ -126,7 +126,7 @@
             <LocalizedName description="Completed Date" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Description -->
+        
         <attribute PhysicalName="jbphh_description">
           <Type>memo</Type>
           <Name>jbphh_description</Name>
@@ -140,7 +140,7 @@
             <LocalizedName description="Description" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Completion Notes -->
+        
         <attribute PhysicalName="jbphh_completionnotes">
           <Type>memo</Type>
           <Name>jbphh_completionnotes</Name>

@@ -11,28 +11,28 @@
     <Description description="Requesting unit representative role. Can create and manage their own SORs and PARs, read notifications addressed to them. Cannot view other units' SOR details." languagecode="1033"/>
   </Descriptions>
   <RolePrivileges>
-    <!-- jbphh_sor: Create, read/write own only (user-level) -->
+    
     <RolePrivilege name="prvCreatejbphh_sor"    level="1"/>
     <RolePrivilege name="prvReadjbphh_sor"      level="2"/>
     <RolePrivilege name="prvWritejbphh_sor"     level="2"/>
     <RolePrivilege name="prvDeletejbphh_sor"    level="0"/>
     <RolePrivilege name="prvAppendTojbphh_sor"  level="2"/>
     <RolePrivilege name="prvAppendjbphh_sor"    level="2"/>
-    <!-- jbphh_par: Create, read/write own BU -->
+    
     <RolePrivilege name="prvCreatejbphh_par"    level="1"/>
     <RolePrivilege name="prvReadjbphh_par"      level="2"/>
     <RolePrivilege name="prvWritejbphh_par"     level="2"/>
     <RolePrivilege name="prvDeletejbphh_par"    level="0"/>
     <RolePrivilege name="prvAppendTojbphh_par"  level="2"/>
     <RolePrivilege name="prvAppendjbphh_par"    level="2"/>
-    <!-- jbphh_task: Read own tasks only -->
+    
     <RolePrivilege name="prvReadjbphh_task"     level="2"/>
     <RolePrivilege name="prvWritejbphh_task"    level="2"/>
-    <!-- jbphh_support: Read tasks related to own SOR -->
+    
     <RolePrivilege name="prvReadjbphh_support"  level="2"/>
-    <!-- jbphh_notification: Read own notifications -->
+    
     <RolePrivilege name="prvReadjbphh_notification" level="2"/>
-    <!-- jbphh_unit: Read all, write own -->
+    
     <RolePrivilege name="prvCreatejbphh_unit"   level="1"/>
     <RolePrivilege name="prvReadjbphh_unit"     level="8"/>
     <RolePrivilege name="prvWritejbphh_unit"    level="1"/>

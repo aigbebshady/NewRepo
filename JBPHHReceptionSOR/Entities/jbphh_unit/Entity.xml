@@ -13,7 +13,7 @@
         <Description description="Military unit or organization that submits SORs for reception support at JBPHH" languagecode="1033"/>
       </Descriptions>
       <attributes>
-        <!-- Primary Key -->
+        
         <attribute PhysicalName="jbphh_unitid">
           <Type>primarykey</Type>
           <Name>jbphh_unitid</Name>
@@ -27,7 +27,7 @@
             <LocalizedName description="Military Unit" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Primary Name -->
+        
         <attribute PhysicalName="jbphh_name">
           <Type>nvarchar</Type>
           <Name>jbphh_name</Name>
@@ -42,7 +42,7 @@
             <LocalizedName description="Unit Name" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Unit Identification Code -->
+        
         <attribute PhysicalName="jbphh_uic">
           <Type>nvarchar</Type>
           <Name>jbphh_uic</Name>
@@ -59,7 +59,7 @@
             <Description description="Unit Identification Code" languagecode="1033"/>
           </Descriptions>
         </attribute>
-        <!-- Service Branch -->
+        
         <attribute PhysicalName="jbphh_servicebranch">
           <Type>nvarchar</Type>
           <Name>jbphh_servicebranch</Name>
@@ -76,7 +76,7 @@
             <Description description="e.g. Army, Navy, Air Force, Marine Corps, Space Force" languagecode="1033"/>
           </Descriptions>
         </attribute>
-        <!-- Home Station -->
+        
         <attribute PhysicalName="jbphh_homestation">
           <Type>nvarchar</Type>
           <Name>jbphh_homestation</Name>
@@ -90,7 +90,7 @@
             <LocalizedName description="Home Station" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- POC Name -->
+        
         <attribute PhysicalName="jbphh_pocname">
           <Type>nvarchar</Type>
           <Name>jbphh_pocname</Name>
@@ -104,7 +104,7 @@
             <LocalizedName description="POC Name" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- POC Phone -->
+        
         <attribute PhysicalName="jbphh_pocphone">
           <Type>nvarchar</Type>
           <Name>jbphh_pocphone</Name>
@@ -118,7 +118,7 @@
             <LocalizedName description="POC Phone" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- POC Email -->
+        
         <attribute PhysicalName="jbphh_pocemail">
           <Type>nvarchar</Type>
           <Name>jbphh_pocemail</Name>
@@ -133,7 +133,7 @@
             <LocalizedName description="POC Email" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- DSN -->
+        
         <attribute PhysicalName="jbphh_dsn">
           <Type>nvarchar</Type>
           <Name>jbphh_dsn</Name>

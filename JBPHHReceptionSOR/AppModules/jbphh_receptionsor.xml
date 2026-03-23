@@ -16,22 +16,22 @@
   <WebResourceId xsi:nil="true"/>
   <WelcomePageId xsi:nil="true"/>
   <AppModuleComponents>
-    <!-- Site Map -->
+    
     <AppModuleComponent type="62" schemaName="" id="{FBE0F11A-3124-5678-9ABC-DEF012345678}" behavior="0"/>
-    <!-- Entities -->
-    <AppModuleComponent type="1" id="{C0D3E4F5-A6B7-89CD-EF01-234567890ABC}" behavior="0"/><!-- jbphh_sor -->
-    <AppModuleComponent type="1" id="{D1E4F506-B7C8-9DEF-0123-456789ABCDEF}" behavior="0"/><!-- jbphh_par -->
-    <AppModuleComponent type="1" id="{E2F5A607-C8D9-EF01-2345-6789ABCDEF01}" behavior="0"/><!-- jbphh_task -->
-    <AppModuleComponent type="1" id="{F3A6B708-D9E0-F012-3456-789ABCDEF012}" behavior="0"/><!-- jbphh_support -->
-    <AppModuleComponent type="1" id="{A4B7C809-E0F1-0123-4567-89ABCDEF0123}" behavior="0"/><!-- jbphh_notification -->
-    <AppModuleComponent type="1" id="{B5C8D90A-F1A2-1234-5678-9ABCDEF01234}" behavior="0"/><!-- jbphh_unit -->
-    <!-- Roles -->
-    <AppModuleComponent type="20" id="{C6D9E00B-A2B3-2345-6789-ABCDEF012345}" behavior="0"/><!-- SOR Administrator -->
-    <AppModuleComponent type="20" id="{D7E0F10C-B3C4-3456-789A-BCDEF0123456}" behavior="0"/><!-- SOR Planner -->
-    <AppModuleComponent type="20" id="{E8F1A20D-C4D5-4567-89AB-CDEF01234567}" behavior="0"/><!-- SOR Viewer -->
-    <AppModuleComponent type="20" id="{F9A2B30E-D5E6-5678-9ABC-DEF012345678}" behavior="0"/><!-- Reception Coordinator -->
-    <AppModuleComponent type="20" id="{A0B3C40F-E6F7-6789-ABCD-EF0123456789}" behavior="0"/><!-- Unit Liaison -->
+    
+    <AppModuleComponent type="1" id="{C0D3E4F5-A6B7-89CD-EF01-234567890ABC}" behavior="0"/>
+    <AppModuleComponent type="1" id="{D1E4F506-B7C8-9DEF-0123-456789ABCDEF}" behavior="0"/>
+    <AppModuleComponent type="1" id="{E2F5A607-C8D9-EF01-2345-6789ABCDEF01}" behavior="0"/>
+    <AppModuleComponent type="1" id="{F3A6B708-D9E0-F012-3456-789ABCDEF012}" behavior="0"/>
+    <AppModuleComponent type="1" id="{A4B7C809-E0F1-0123-4567-89ABCDEF0123}" behavior="0"/>
+    <AppModuleComponent type="1" id="{B5C8D90A-F1A2-1234-5678-9ABCDEF01234}" behavior="0"/>
+    
+    <AppModuleComponent type="20" id="{C6D9E00B-A2B3-2345-6789-ABCDEF012345}" behavior="0"/>
+    <AppModuleComponent type="20" id="{D7E0F10C-B3C4-3456-789A-BCDEF0123456}" behavior="0"/>
+    <AppModuleComponent type="20" id="{E8F1A20D-C4D5-4567-89AB-CDEF01234567}" behavior="0"/>
+    <AppModuleComponent type="20" id="{F9A2B30E-D5E6-5678-9ABC-DEF012345678}" behavior="0"/>
+    <AppModuleComponent type="20" id="{A0B3C40F-E6F7-6789-ABCD-EF0123456789}" behavior="0"/>
   </AppModuleComponents>
   <NavigationType>0</NavigationType>
-  <ClientType>4</ClientType><!-- Unified Interface -->
+  <ClientType>4</ClientType>
 </AppModule>

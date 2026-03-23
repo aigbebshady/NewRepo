@@ -13,7 +13,7 @@
         <Description description="Pre-Arrival Request detailing specific needs of an inbound unit or group" languagecode="1033"/>
       </Descriptions>
       <attributes>
-        <!-- Primary Key -->
+        
         <attribute PhysicalName="jbphh_parid">
           <Type>primarykey</Type>
           <Name>jbphh_parid</Name>
@@ -27,7 +27,7 @@
             <LocalizedName description="Pre-Arrival Request" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Primary Name -->
+        
         <attribute PhysicalName="jbphh_name">
           <Type>nvarchar</Type>
           <Name>jbphh_name</Name>
@@ -42,7 +42,7 @@
             <LocalizedName description="PAR Title" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- PAR Number -->
+        
         <attribute PhysicalName="jbphh_parnumber">
           <Type>nvarchar</Type>
           <Name>jbphh_parnumber</Name>
@@ -56,7 +56,7 @@
             <LocalizedName description="PAR Number" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- PAR Status -->
+        
         <attribute PhysicalName="jbphh_parstatus">
           <Type>picklist</Type>
           <Name>jbphh_parstatus</Name>
@@ -70,7 +70,7 @@
             <LocalizedName description="PAR Status" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- XP Decision -->
+        
         <attribute PhysicalName="jbphh_xpdecision">
           <Type>picklist</Type>
           <Name>jbphh_xpdecision</Name>
@@ -84,7 +84,7 @@
             <LocalizedName description="XP Decision" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Related SOR (lookup) -->
+        
         <attribute PhysicalName="jbphh_relatedsorid">
           <Type>lookup</Type>
           <Name>jbphh_relatedsorid</Name>
@@ -98,7 +98,7 @@
             <LocalizedName description="Related SOR" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Arrival Date -->
+        
         <attribute PhysicalName="jbphh_arrivaldate">
           <Type>datetime</Type>
           <Name>jbphh_arrivaldate</Name>
@@ -112,7 +112,7 @@
             <LocalizedName description="Arrival Date" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Departure Date -->
+        
         <attribute PhysicalName="jbphh_departuredate">
           <Type>datetime</Type>
           <Name>jbphh_departuredate</Name>
@@ -126,7 +126,7 @@
             <LocalizedName description="Departure Date" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Personnel Count -->
+        
         <attribute PhysicalName="jbphh_personnelcount">
           <Type>integer</Type>
           <Name>jbphh_personnelcount</Name>
@@ -141,7 +141,7 @@
             <LocalizedName description="Personnel Count" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- POC Name -->
+        
         <attribute PhysicalName="jbphh_pocname">
           <Type>nvarchar</Type>
           <Name>jbphh_pocname</Name>
@@ -155,7 +155,7 @@
             <LocalizedName description="POC Name" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- POC Phone -->
+        
         <attribute PhysicalName="jbphh_pocphone">
           <Type>nvarchar</Type>
           <Name>jbphh_pocphone</Name>
@@ -169,7 +169,7 @@
             <LocalizedName description="POC Phone" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- POC Email -->
+        
         <attribute PhysicalName="jbphh_pocemail">
           <Type>nvarchar</Type>
           <Name>jbphh_pocemail</Name>
@@ -184,7 +184,7 @@
             <LocalizedName description="POC Email" languagecode="1033"/>
           </LocalizedNames>
         </attribute>
-        <!-- Special Requirements -->
+        
         <attribute PhysicalName="jbphh_specialrequirements">
           <Type>memo</Type>
           <Name>jbphh_specialrequirements</Name>
@@ -201,7 +201,7 @@
             <Description description="Any special or unique support requirements not covered by standard categories" languagecode="1033"/>
           </Descriptions>
         </attribute>
-        <!-- XP Comments -->
+        
         <attribute PhysicalName="jbphh_xpcomments">
           <Type>memo</Type>
           <Name>jbphh_xpcomments</Name>

@@ -30,7 +30,7 @@
   </TriggerOnUpdateAttributeList>
   <InputParameters/>
   <Steps>
-    <!-- Step 1: Check condition - SOR status is Submitted -->
+    
     <Step StepId="{1A2B3C4D-0001-0001-0001-000000000001}"
           Name="Check SOR Status is Submitted"
           Description="Only proceed if the SOR has just been set to Submitted"
@@ -44,14 +44,14 @@
               <Property name="jbphh_sorstatus" />
             </Operand>
             <Operand xsi:type="ConstantOperand">
-              <Value>64700001</Value><!-- Submitted -->
+              <Value>64700001</Value>
             </Operand>
           </Operands>
           <Operator>Equal</Operator>
         </Expression>
       </Condition>
       <Steps>
-        <!-- Step 1a: Create SOR Notification record -->
+        
         <Step StepId="{1A2B3C4D-0001-0002-0001-000000000002}"
               Name="Create SOR Submission Notification Record"
               Description="Creates a notification record for the SOR submission event"
@@ -74,7 +74,7 @@
             <Attribute name="jbphh_notificationtype">
               <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Expression xsi:type="ConstantExpression">
-                  <Value>64700000</Value><!-- SOR Submitted -->
+                  <Value>64700000</Value>
                 </Expression>
               </Formula>
             </Attribute>
@@ -113,7 +113,7 @@
             </Attribute>
           </Attributes>
         </Step>
-        <!-- Step 1b: Send Teams message via connection reference -->
+        
         <Step StepId="{1A2B3C4D-0001-0003-0001-000000000003}"
               Name="Post Teams Message to XP Channel"
               Description="Posts a message to the 647 LRS Plans and Integration Teams channel"

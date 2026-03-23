@@ -19,15 +19,13 @@
     <Icon>WebResource/jbphh_soricon_16</Icon>
     <Groups>
 
-      <!-- =========================================================
-           Group 1: SOR & PAR
-      ========================================================== -->
+      
       <Group Id="jbphh_sor_group" IsProfile="false">
         <Titles>
           <Title LCID="1033" Title="Requirements"/>
         </Titles>
         <SubAreas>
-          <!-- Statements of Requirements -->
+          
           <SubArea Id="jbphh_sor_subarea"
                    Entity="jbphh_sor"
                    Title="Statements of Requirements"
@@ -41,7 +39,7 @@
               <Description LCID="1033" Description="Create and manage Reception Support Statements of Requirements"/>
             </Descriptions>
           </SubArea>
-          <!-- Pre-Arrival Requests -->
+          
           <SubArea Id="jbphh_par_subarea"
                    Entity="jbphh_par"
                    Title="Pre-Arrival Requests"
@@ -57,15 +55,13 @@
         </SubAreas>
       </Group>
 
-      <!-- =========================================================
-           Group 2: Execution
-      ========================================================== -->
+      
       <Group Id="jbphh_execution_group" IsProfile="false">
         <Titles>
           <Title LCID="1033" Title="Execution"/>
         </Titles>
         <SubAreas>
-          <!-- Tasks -->
+          
           <SubArea Id="jbphh_task_subarea"
                    Entity="jbphh_task"
                    Title="Reception Tasks"
@@ -78,7 +74,7 @@
               <Description LCID="1033" Description="Manage and track individual action items for reception support"/>
             </Descriptions>
           </SubArea>
-          <!-- Support Requests -->
+          
           <SubArea Id="jbphh_support_subarea"
                    Entity="jbphh_support"
                    Title="Support Requests"
@@ -94,15 +90,13 @@
         </SubAreas>
       </Group>
 
-      <!-- =========================================================
-           Group 3: Communications
-      ========================================================== -->
+      
       <Group Id="jbphh_comms_group" IsProfile="false">
         <Titles>
           <Title LCID="1033" Title="Communications"/>
         </Titles>
         <SubAreas>
-          <!-- Notifications -->
+          
           <SubArea Id="jbphh_notification_subarea"
                    Entity="jbphh_notification"
                    Title="Notifications"
@@ -118,15 +112,13 @@
         </SubAreas>
       </Group>
 
-      <!-- =========================================================
-           Group 4: Administration
-      ========================================================== -->
+      
       <Group Id="jbphh_admin_group" IsProfile="false">
         <Titles>
           <Title LCID="1033" Title="Administration"/>
         </Titles>
         <SubAreas>
-          <!-- Military Units -->
+          
           <SubArea Id="jbphh_unit_subarea"
                    Entity="jbphh_unit"
                    Title="Military Units"

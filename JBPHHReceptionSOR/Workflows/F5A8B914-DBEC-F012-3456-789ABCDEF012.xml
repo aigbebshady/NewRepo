@@ -31,7 +31,7 @@
   </TriggerOnUpdateAttributeList>
   <InputParameters/>
   <Steps>
-    <!-- Step 1: Check that Assigned To is not empty -->
+    
     <Step StepId="{3C4D5E6F-0003-0001-0003-000000000001}"
           Name="Check Assigned To is Populated"
           Description="Only proceed if there is an assigned user"
@@ -52,7 +52,7 @@
         </Expression>
       </Condition>
       <Steps>
-        <!-- Step 1a: Create Task Notification record -->
+        
         <Step StepId="{3C4D5E6F-0003-0002-0003-000000000002}"
               Name="Create Task Assignment Notification"
               Description="Creates a notification record for the task assignment"
@@ -75,7 +75,7 @@
             <Attribute name="jbphh_notificationtype">
               <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Expression xsi:type="ConstantExpression">
-                  <Value>64700004</Value><!-- Task Assigned -->
+                  <Value>64700004</Value>
                 </Expression>
               </Formula>
             </Attribute>
@@ -114,7 +114,7 @@
             </Attribute>
           </Attributes>
         </Step>
-        <!-- Step 1b: Post Teams notification to assigned user -->
+        
         <Step StepId="{3C4D5E6F-0003-0003-0003-000000000003}"
               Name="Send Teams Message to Assignee"
               Description="Sends a direct Teams message to the task assignee"

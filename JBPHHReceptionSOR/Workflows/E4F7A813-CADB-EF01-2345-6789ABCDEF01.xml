@@ -32,7 +32,7 @@
   </TriggerOnUpdateAttributeList>
   <InputParameters/>
   <Steps>
-    <!-- Step 1: Create PAR Notification record -->
+    
     <Step StepId="{2B3C4D5E-0002-0001-0002-000000000001}"
           Name="Create PAR Status Change Notification"
           Description="Creates a notification record for the PAR status change"
@@ -55,7 +55,7 @@
         <Attribute name="jbphh_notificationtype">
           <Formula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <Expression xsi:type="ConstantExpression">
-              <Value>64700003</Value><!-- PAR Status Change -->
+              <Value>64700003</Value>
             </Expression>
           </Formula>
         </Attribute>
@@ -86,7 +86,7 @@
         </Attribute>
       </Attributes>
     </Step>
-    <!-- Step 2: Send Email to record owner / unit liaison -->
+    
     <Step StepId="{2B3C4D5E-0002-0002-0002-000000000002}"
           Name="Send Email to Unit Liaison"
           Description="Sends an email notification to the PAR owner (unit liaison)"
