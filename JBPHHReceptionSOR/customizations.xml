@@ -417,66 +417,6 @@
     </Role>
   </Roles>
 
-  
-  <Workflows>
-    <Workflow WorkflowId="{D3E6F712-B9CA-9DEF-0123-456789ABCDEF}"
-              Name="Notify XP on New SOR Submission"
-              Type="1" Category="0" Mode="1" Scope="4"
-              TriggerOnCreate="1" TriggerOnDelete="0"
-              StateCode="1" StatusCode="2"
-              PrimaryEntity="jbphh_sor"
-              IntroducedVersion="1.0.0.0" IsCustomizable="1">
-      <LocalizedNames>
-        <LocalizedName description="Notify XP on New SOR Submission" languagecode="1033"/>
-      </LocalizedNames>
-    </Workflow>
-    <Workflow WorkflowId="{E4F7A813-CADB-EF01-2345-6789ABCDEF01}"
-              Name="Notify Unit Liaison on PAR Status Change"
-              Type="1" Category="0" Mode="1" Scope="4"
-              TriggerOnCreate="0" TriggerOnDelete="0" TriggerOnUpdate="1"
-              StateCode="1" StatusCode="2"
-              PrimaryEntity="jbphh_par"
-              IntroducedVersion="1.0.0.0" IsCustomizable="1">
-      <LocalizedNames>
-        <LocalizedName description="Notify Unit Liaison on PAR Status Change" languagecode="1033"/>
-      </LocalizedNames>
-    </Workflow>
-    <Workflow WorkflowId="{F5A8B914-DBEC-F012-3456-789ABCDEF012}"
-              Name="Notify Assignee on Task Assignment"
-              Type="1" Category="0" Mode="1" Scope="4"
-              TriggerOnCreate="1" TriggerOnDelete="0" TriggerOnUpdate="1"
-              StateCode="1" StatusCode="2"
-              PrimaryEntity="jbphh_task"
-              IntroducedVersion="1.0.0.0" IsCustomizable="1">
-      <LocalizedNames>
-        <LocalizedName description="Notify Assignee on Task Assignment" languagecode="1033"/>
-      </LocalizedNames>
-    </Workflow>
-    <Workflow WorkflowId="{A6B9CA15-ECFD-0123-4567-89ABCDEF0123}"
-              Name="SOR Approval Workflow"
-              Type="1" Category="0" Mode="1" Scope="4"
-              TriggerOnCreate="0" TriggerOnDelete="0" TriggerOnUpdate="1"
-              StateCode="1" StatusCode="2"
-              PrimaryEntity="jbphh_sor"
-              IntroducedVersion="1.0.0.0" IsCustomizable="1">
-      <LocalizedNames>
-        <LocalizedName description="SOR Approval Workflow" languagecode="1033"/>
-      </LocalizedNames>
-    </Workflow>
-    <Workflow WorkflowId="{B7CADB16-FDE0-1234-5678-9ABCDEF01234}"
-              Name="Escalate Unresolved Support Requests"
-              Type="1" Category="0" Mode="1" Scope="4"
-              TriggerOnCreate="0" TriggerOnDelete="0" TriggerOnUpdate="1"
-              StateCode="1" StatusCode="2"
-              PrimaryEntity="jbphh_support"
-              IntroducedVersion="1.0.0.0" IsCustomizable="1">
-      <LocalizedNames>
-        <LocalizedName description="Escalate Unresolved Support Requests" languagecode="1033"/>
-      </LocalizedNames>
-    </Workflow>
-  </Workflows>
-
-  
   <SiteMaps>
     <SiteMap SiteMapId="{FBE0F11A-3124-5678-9ABC-DEF012345678}"
              Name="JBPHH Reception SOR Site Map"

@@ -77,13 +77,8 @@
       <RootComponent type="20" id="{F9A2B30E-D5E6-5678-9ABC-DEF012345678}" behavior="0"/>
       <RootComponent type="20" id="{A0B3C40F-E6F7-6789-ABCD-EF0123456789}" behavior="0"/>
       
-      <RootComponent type="29" id="{D3E6F712-B9CA-9DEF-0123-456789ABCDEF}" behavior="0"/>
-      <RootComponent type="29" id="{E4F7A813-CADB-EF01-2345-6789ABCDEF01}" behavior="0"/>
-      <RootComponent type="29" id="{F5A8B914-DBEC-F012-3456-789ABCDEF012}" behavior="0"/>
-      <RootComponent type="29" id="{A6B9CA15-ECFD-0123-4567-89ABCDEF0123}" behavior="0"/>
-      <RootComponent type="29" id="{B7CADB16-FDE0-1234-5678-9ABCDEF01234}" behavior="0"/>
 
-      <RootComponent type="62" id="{FBE0F11A-3124-5678-9ABC-DEF012345678}" behavior="0"/>
+<RootComponent type="62" id="{FBE0F11A-3124-5678-9ABC-DEF012345678}" behavior="0"/>
       
       <RootComponent type="80" id="{EAFDE019-2013-4567-89AB-CDEF01234567}" behavior="0"/>
     </RootComponents>
