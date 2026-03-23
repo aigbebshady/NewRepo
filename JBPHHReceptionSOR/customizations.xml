@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  JBPHH Reception SOR System - customizations.xml
-  15 WG / 647 LRS Plans and Integration
-  Joint Base Pearl Harbor-Hickam
-  UNCLASSIFIED
-  Version: 1.0.0.0
--->
+
 <ImportExportXml version="9.2.24.10379"
                  SolutionPackageVersion="9.2"
                  languagecode="1033"
                  generatedBy="CRMExport"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <!-- ===========================================================
-       GLOBAL OPTION SETS
-  ============================================================ -->
+  
   <optionsets>
 
-    <!-- Mission Type -->
+    
     <optionset Name="jbphh_missiontype" localizedName="Mission Type">
       <OptionSetType>picklist</OptionSetType>
       <IsGlobal>1</IsGlobal>
@@ -36,7 +28,7 @@
       <LocalizedNames><LocalizedName description="Mission Type" languagecode="1033"/></LocalizedNames>
     </optionset>
 
-    <!-- PAR Status -->
+    
     <optionset Name="jbphh_parstatus" localizedName="PAR Status">
       <OptionSetType>picklist</OptionSetType>
       <IsGlobal>1</IsGlobal>
@@ -55,7 +47,7 @@
       <LocalizedNames><LocalizedName description="PAR Status" languagecode="1033"/></LocalizedNames>
     </optionset>
 
-    <!-- XP Decision -->
+    
     <optionset Name="jbphh_xpdecision" localizedName="XP Decision">
       <OptionSetType>picklist</OptionSetType>
       <IsGlobal>1</IsGlobal>
@@ -72,7 +64,7 @@
       <LocalizedNames><LocalizedName description="XP Decision" languagecode="1033"/></LocalizedNames>
     </optionset>
 
-    <!-- SOR Status -->
+    
     <optionset Name="jbphh_sorstatus" localizedName="SOR Status">
       <OptionSetType>picklist</OptionSetType>
       <IsGlobal>1</IsGlobal>
@@ -92,7 +84,7 @@
       <LocalizedNames><LocalizedName description="SOR Status" languagecode="1033"/></LocalizedNames>
     </optionset>
 
-    <!-- Task Status -->
+    
     <optionset Name="jbphh_taskstatus" localizedName="Task Status">
       <OptionSetType>picklist</OptionSetType>
       <IsGlobal>1</IsGlobal>
@@ -110,7 +102,7 @@
       <LocalizedNames><LocalizedName description="Task Status" languagecode="1033"/></LocalizedNames>
     </optionset>
 
-    <!-- Task Priority -->
+    
     <optionset Name="jbphh_taskpriority" localizedName="Task Priority">
       <OptionSetType>picklist</OptionSetType>
       <IsGlobal>1</IsGlobal>
@@ -126,7 +118,7 @@
       <LocalizedNames><LocalizedName description="Task Priority" languagecode="1033"/></LocalizedNames>
     </optionset>
 
-    <!-- Support Status -->
+    
     <optionset Name="jbphh_supportstatus" localizedName="Support Status">
       <OptionSetType>picklist</OptionSetType>
       <IsGlobal>1</IsGlobal>
@@ -144,7 +136,7 @@
       <LocalizedNames><LocalizedName description="Support Status" languagecode="1033"/></LocalizedNames>
     </optionset>
 
-    <!-- Notification Type -->
+    
     <optionset Name="jbphh_notificationtype" localizedName="Notification Type">
       <OptionSetType>picklist</OptionSetType>
       <IsGlobal>1</IsGlobal>
@@ -166,14 +158,9 @@
 
   </optionsets>
 
-  <!-- ===========================================================
-       ENTITIES
-       Full attribute, form, and view definitions are in
-       Entities/<entityname>/Entity.xml.
-       This section references each entity by ID.
-  ============================================================ -->
+  
   <Entities>
-    <!-- jbphh_sor - Statement of Requirements -->
+    
     <Entity>
       <EntityInfo>
         <entity Name="jbphh_sor">
@@ -194,7 +181,7 @@
       </EntityInfo>
     </Entity>
 
-    <!-- jbphh_par - Pre-Arrival Request -->
+    
     <Entity>
       <EntityInfo>
         <entity Name="jbphh_par">
@@ -215,7 +202,7 @@
       </EntityInfo>
     </Entity>
 
-    <!-- jbphh_task - Reception Task -->
+    
     <Entity>
       <EntityInfo>
         <entity Name="jbphh_task">
@@ -236,7 +223,7 @@
       </EntityInfo>
     </Entity>
 
-    <!-- jbphh_support - Support Request -->
+    
     <Entity>
       <EntityInfo>
         <entity Name="jbphh_support">
@@ -257,7 +244,7 @@
       </EntityInfo>
     </Entity>
 
-    <!-- jbphh_notification - SOR Notification -->
+    
     <Entity>
       <EntityInfo>
         <entity Name="jbphh_notification">
@@ -278,7 +265,7 @@
       </EntityInfo>
     </Entity>
 
-    <!-- jbphh_unit - Military Unit -->
+    
     <Entity>
       <EntityInfo>
         <entity Name="jbphh_unit">
@@ -301,12 +288,10 @@
 
   </Entities>
 
-  <!-- ===========================================================
-       ENTITY RELATIONSHIPS
-  ============================================================ -->
+  
   <EntityRelationships>
 
-    <!-- jbphh_sor (1) → jbphh_par (N) -->
+    
     <EntityRelationship Name="jbphh_sor_jbphh_par">
       <EntityRelationshipType>OneToMany</EntityRelationshipType>
       <IsCustomizable>1</IsCustomizable>
@@ -322,7 +307,7 @@
       <CascadeUnshare>NoCascade</CascadeUnshare>
     </EntityRelationship>
 
-    <!-- jbphh_sor (1) → jbphh_task (N) -->
+    
     <EntityRelationship Name="jbphh_sor_jbphh_task">
       <EntityRelationshipType>OneToMany</EntityRelationshipType>
       <IsCustomizable>1</IsCustomizable>
@@ -338,7 +323,7 @@
       <CascadeUnshare>NoCascade</CascadeUnshare>
     </EntityRelationship>
 
-    <!-- jbphh_sor (1) → jbphh_support (N) -->
+    
     <EntityRelationship Name="jbphh_sor_jbphh_support">
       <EntityRelationshipType>OneToMany</EntityRelationshipType>
       <IsCustomizable>1</IsCustomizable>
@@ -354,7 +339,7 @@
       <CascadeUnshare>NoCascade</CascadeUnshare>
     </EntityRelationship>
 
-    <!-- jbphh_sor (1) → jbphh_notification (N) -->
+    
     <EntityRelationship Name="jbphh_sor_jbphh_notification">
       <EntityRelationshipType>OneToMany</EntityRelationshipType>
       <IsCustomizable>1</IsCustomizable>
@@ -370,7 +355,7 @@
       <CascadeUnshare>NoCascade</CascadeUnshare>
     </EntityRelationship>
 
-    <!-- jbphh_unit (1) → jbphh_sor (N) -->
+    
     <EntityRelationship Name="jbphh_unit_jbphh_sor">
       <EntityRelationshipType>OneToMany</EntityRelationshipType>
       <IsCustomizable>1</IsCustomizable>
@@ -388,9 +373,7 @@
 
   </EntityRelationships>
 
-  <!-- ===========================================================
-       SECURITY ROLES
-  ============================================================ -->
+  
   <Roles>
     <Role id="{C6D9E00B-A2B3-2345-6789-ABCDEF012345}"
           name="SOR Administrator"
@@ -434,9 +417,7 @@
     </Role>
   </Roles>
 
-  <!-- ===========================================================
-       CONNECTION REFERENCES
-  ============================================================ -->
+  
   <connectionreferences>
     <connectionreference connectionreferencelogicalname="jbphh_dataverse_connection">
       <connectionreferencedisplayname>JBPHH Dataverse Connection</connectionreferencedisplayname>
@@ -454,9 +435,7 @@
     </connectionreference>
   </connectionreferences>
 
-  <!-- ===========================================================
-       WORKFLOWS (referenced - full definitions in Workflows/ folder)
-  ============================================================ -->
+  
   <Workflows>
     <Workflow WorkflowId="{D3E6F712-B9CA-9DEF-0123-456789ABCDEF}"
               Name="Notify XP on New SOR Submission"
@@ -515,9 +494,7 @@
     </Workflow>
   </Workflows>
 
-  <!-- ===========================================================
-       SITE MAP
-  ============================================================ -->
+  
   <SiteMaps>
     <SiteMap SiteMapId="{FBE0F11A-3124-5678-9ABC-DEF012345678}"
              Name="JBPHH Reception SOR Site Map"
@@ -530,9 +507,7 @@
     </SiteMap>
   </SiteMaps>
 
-  <!-- ===========================================================
-       APP MODULE
-  ============================================================ -->
+  
   <AppModules>
     <AppModule AppModuleId="{EAFDE019-2013-4567-89AB-CDEF01234567}"
                UniqueName="jbphh_receptionsor"
