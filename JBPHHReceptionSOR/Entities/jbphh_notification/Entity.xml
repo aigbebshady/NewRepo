@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EntityId="{A4B7C809-E0F1-0123-4567-89ABCDEF0123}">
   <Name LocalizedName="SOR Notification" OriginalName="jbphh_notification">jbphh_notification</Name>
   <EntityInfo>
     <entity Name="jbphh_notification">

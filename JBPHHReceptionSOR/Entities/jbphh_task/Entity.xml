@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EntityId="{E2F5A607-C8D9-EF01-2345-6789ABCDEF01}">
   <Name LocalizedName="Reception Task" OriginalName="jbphh_task">jbphh_task</Name>
   <EntityInfo>
     <entity Name="jbphh_task">

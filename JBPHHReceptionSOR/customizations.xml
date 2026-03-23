@@ -161,7 +161,7 @@
   
   <Entities>
     
-    <Entity>
+    <Entity id="{C0D3E4F5-A6B7-89CD-EF01-234567890ABC}">
       <EntityInfo>
         <entity Name="jbphh_sor">
           <LocalizedNames>
@@ -182,7 +182,7 @@
     </Entity>
 
     
-    <Entity>
+    <Entity id="{D1E4F506-B7C8-9DEF-0123-456789ABCDEF}">
       <EntityInfo>
         <entity Name="jbphh_par">
           <LocalizedNames>
@@ -203,7 +203,7 @@
     </Entity>
 
     
-    <Entity>
+    <Entity id="{E2F5A607-C8D9-EF01-2345-6789ABCDEF01}">
       <EntityInfo>
         <entity Name="jbphh_task">
           <LocalizedNames>
@@ -224,7 +224,7 @@
     </Entity>
 
     
-    <Entity>
+    <Entity id="{F3A6B708-D9E0-F012-3456-789ABCDEF012}">
       <EntityInfo>
         <entity Name="jbphh_support">
           <LocalizedNames>
@@ -245,7 +245,7 @@
     </Entity>
 
     
-    <Entity>
+    <Entity id="{A4B7C809-E0F1-0123-4567-89ABCDEF0123}">
       <EntityInfo>
         <entity Name="jbphh_notification">
           <LocalizedNames>
@@ -266,7 +266,7 @@
     </Entity>
 
     
-    <Entity>
+    <Entity id="{B5C8D90A-F1A2-1234-5678-9ABCDEF01234}">
       <EntityInfo>
         <entity Name="jbphh_unit">
           <LocalizedNames>

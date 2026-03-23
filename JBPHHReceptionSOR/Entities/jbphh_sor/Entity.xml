@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EntityId="{C0D3E4F5-A6B7-89CD-EF01-234567890ABC}">
   <Name LocalizedName="Statement of Requirements" OriginalName="jbphh_sor">jbphh_sor</Name>
   <EntityInfo>
     <entity Name="jbphh_sor">

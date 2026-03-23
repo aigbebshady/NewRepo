@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EntityId="{F3A6B708-D9E0-F012-3456-789ABCDEF012}">
   <Name LocalizedName="Support Request" OriginalName="jbphh_support">jbphh_support</Name>
   <EntityInfo>
     <entity Name="jbphh_support">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EntityId="{D1E4F506-B7C8-9DEF-0123-456789ABCDEF}">
   <Name LocalizedName="Pre-Arrival Request" OriginalName="jbphh_par">jbphh_par</Name>
   <EntityInfo>
     <entity Name="jbphh_par">
